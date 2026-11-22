@@ -308,6 +308,24 @@
   border-color: var(--sl-color-accent);
 }
 
+/* Tabelas e blocos de checksum com scroll interno seguro no mobile */
+.forge-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.forge-code-block {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0.9rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--forge-border);
+  background: var(--forge-surface-elevated);
+  font-size: 0.84rem;
+}
+
 /* Ajustes responsivos para telas pequenas */
 @media (max-width: 640px) {
   .forge-showcase__meta {
