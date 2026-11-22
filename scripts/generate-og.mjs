@@ -21,10 +21,10 @@ const html = `<!doctype html>
       body {
         width: 1200px;
         height: 630px;
-        background: radial-gradient(circle at 20% 15%, rgba(245, 158, 11, 0.22), transparent 52%),
-                    radial-gradient(circle at 85% 80%, rgba(234, 88, 12, 0.14), transparent 50%),
-                    #0c0f14;
-        color: #f8fafc;
+        background: radial-gradient(circle at 20% 15%, rgba(255, 122, 26, 0.22), transparent 52%),
+                    radial-gradient(circle at 85% 80%, rgba(224, 69, 15, 0.16), transparent 50%),
+                    #0f0d0c;
+        color: #efe5d8;
         font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         display: flex;
         align-items: center;
@@ -48,7 +48,7 @@ const html = `<!doctype html>
         font-size: 26px;
         font-weight: 800;
         letter-spacing: -0.02em;
-        color: #f8fafc;
+        color: #efe5d8;
       }
       .badge {
         display: inline-flex;
@@ -58,25 +58,25 @@ const html = `<!doctype html>
         border-radius: 999px;
         font-size: 15px;
         font-weight: 700;
-        background: rgba(245, 158, 11, 0.16);
-        border: 1px solid rgba(245, 158, 11, 0.45);
-        color: #fde68a;
+        background: rgba(255, 122, 26, 0.16);
+        border: 1px solid rgba(255, 122, 26, 0.5);
+        color: #ffb25c;
       }
       h1 {
         font-size: 44px;
         line-height: 1.1;
         letter-spacing: -0.03em;
         font-weight: 800;
-        color: #ffffff;
+        color: #efe5d8;
       }
       h1 span {
-        color: #f59e0b;
+        color: #ff7a1a;
         white-space: nowrap;
       }
       p {
         font-size: 20px;
         line-height: 1.45;
-        color: #cbd5e1;
+        color: #c9b9a6;
       }
       .pills {
         display: flex;
@@ -89,9 +89,9 @@ const html = `<!doctype html>
         border-radius: 8px;
         font-size: 14px;
         font-weight: 600;
-        background: #13171d;
-        border: 1px solid #26303d;
-        color: #e2e8f0;
+        background: #201a15;
+        border: 1px solid #33291f;
+        color: #efe5d8;
       }
       .right {
         flex: 1;
@@ -103,9 +103,9 @@ const html = `<!doctype html>
         width: 560px;
         border-radius: 14px;
         overflow: hidden;
-        border: 1px solid rgba(245, 158, 11, 0.35);
-        background: #13171d;
-        box-shadow: 0 30px 65px rgba(0, 0, 0, 0.65);
+        border: 1px solid rgba(255, 122, 26, 0.4);
+        background: #17130f;
+        box-shadow: 0 30px 65px rgba(0, 0, 0, 0.7);
         transform: perspective(1200px) rotateY(-5deg);
       }
       .window-bar {
@@ -113,10 +113,10 @@ const html = `<!doctype html>
         align-items: center;
         gap: 7px;
         padding: 10px 14px;
-        background: #0c0f14;
-        border-bottom: 1px solid #232b36;
+        background: #120f0d;
+        border-bottom: 1px solid #33291f;
       }
-      .dot { width: 9px; height: 9px; border-radius: 999px; background: #475569; }
+      .dot { width: 9px; height: 9px; border-radius: 999px; background: #4a3c2e; }
       .window img {
         display: block;
         width: 100%;
@@ -128,11 +128,11 @@ const html = `<!doctype html>
     <div class="left">
       <div class="brand">
         <svg width="46" height="46" viewBox="0 0 64 64" fill="none">
-          <rect width="64" height="64" rx="14" fill="#13171D"/>
-          <rect x="2" y="2" width="60" height="60" rx="12" stroke="#F59E0B" stroke-opacity="0.5" stroke-width="2"/>
-          <path d="M32 10C35.8 16.5 41 20.8 41 27.2C41 32.3 37 36 32 36C27 36 23 32.3 23 27.2C23 23.4 25.1 20.2 27.6 17.5C27.4 20.2 28.6 21.8 30.2 22.5C29.4 18.2 30.1 13.8 32 10Z" fill="#F59E0B"/>
-          <path d="M16 39H48L44.5 45.5C43.9 46.6 42.7 47.3 41.4 47.3H22.6C21.3 47.3 20.1 46.6 19.5 45.5L16 39Z" fill="#F59E0B"/>
-          <rect x="21" y="49.5" width="22" height="4.5" rx="2.25" fill="#FDE68A"/>
+          <rect width="64" height="64" rx="14" fill="#17130F"/>
+          <rect x="2" y="2" width="60" height="60" rx="12" stroke="#FF7A1A" stroke-opacity="0.55" stroke-width="2"/>
+          <path d="M32 10C35.8 16.5 41 20.8 41 27.2C41 32.3 37 36 32 36C27 36 23 32.3 23 27.2C23 23.4 25.1 20.2 27.6 17.5C27.4 20.2 28.6 21.8 30.2 22.5C29.4 18.2 30.1 13.8 32 10Z" fill="#FF7A1A"/>
+          <path d="M16 39H48L44.5 45.5C43.9 46.6 42.7 47.3 41.4 47.3H22.6C21.3 47.3 20.1 46.6 19.5 45.5L16 39Z" fill="#FF7A1A"/>
+          <rect x="21" y="49.5" width="22" height="4.5" rx="2.25" fill="#FFB25C"/>
         </svg>
         <span class="brand-name">HephaestusForge</span>
       </div>

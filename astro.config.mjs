@@ -16,7 +16,26 @@ export default defineConfig({
       head: [
         {
           tag: 'meta',
-          attrs: { name: 'theme-color', content: '#0c0f14' },
+          attrs: { name: 'theme-color', content: '#0f0d0c' },
+        },
+        {
+          tag: 'link',
+          attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'preconnect',
+            href: 'https://fonts.gstatic.com',
+            crossorigin: '',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap',
+          },
         },
         {
           tag: 'meta',

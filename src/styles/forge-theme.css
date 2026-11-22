@@ -1,33 +1,90 @@
-/* Identidade visual industrial da Forja (âmbar + grafite) sobre o tema Starlight */
+/* Identidade visual oficial "Forja Viva" do HephaestusForge (carvão quente + bronze + brasa) */
 :root {
-  --sl-color-accent-low: #3b2306;
-  --sl-color-accent: #f59e0b;
-  --sl-color-accent-high: #fde68a;
-  --sl-color-white: #f8fafc;
-  --sl-color-gray-1: #e2e8f0;
-  --sl-color-gray-2: #cbd5e1;
-  --sl-color-gray-3: #94a3b8;
-  --sl-color-gray-4: #475569;
-  --sl-color-gray-5: #1e242d;
-  --sl-color-gray-6: #13171d;
-  --sl-color-black: #0c0f14;
-  --forge-surface: #13171d;
-  --forge-surface-elevated: #0c0f14;
-  --forge-border: #232b36;
-  --forge-glow: rgba(245, 158, 11, 0.14);
+  /* Tokens originais do app (Forja Viva) */
+  --forge-bg: #0f0d0c;
+  --forge-canvas: #0b0a09;
+  --forge-panel: #17130f;
+  --forge-surface: #1b1612;
+  --forge-sidebar: #120f0d;
+  --forge-card: #201a15;
+  --forge-hover: #2a221b;
+  --forge-border: #33291f;
+  --forge-border-hover: #4a3c2e;
+  --forge-muted: #a08c78;
+  --forge-text: #efe5d8;
+  --forge-amber: #ff7a1a;
+  --forge-amber-light: #ffb25c;
+  --forge-amber-dark: #c2560c;
+  --forge-flame: #e0450f;
+  --forge-focus: #ffd9a0;
+  --forge-white-hot: #fff1d0;
+
+  /* Mapeamento Starlight Dark (Forja Viva) */
+  --sl-color-accent-low: #3a1a06;
+  --sl-color-accent: #ff7a1a;
+  --sl-color-accent-high: #ffb25c;
+  --sl-color-white: #efe5d8;
+  --sl-color-gray-1: #e5d8c8;
+  --sl-color-gray-2: #c9b9a6;
+  --sl-color-gray-3: #a08c78;
+  --sl-color-gray-4: #5a4a3a;
+  --sl-color-gray-5: #33291f;
+  --sl-color-gray-6: #17130f;
+  --sl-color-black: #0f0d0c;
+
+  --sl-color-bg: var(--forge-bg);
+  --sl-color-bg-nav: var(--forge-sidebar);
+  --sl-color-bg-sidebar: var(--forge-sidebar);
+  --sl-color-hairline-light: var(--forge-border);
+  --sl-color-hairline: var(--forge-border);
+
+  --forge-surface-card: var(--forge-card);
+  --forge-surface-elevated: var(--forge-panel);
+  --forge-glow: rgba(255, 122, 26, 0.16);
+  --forge-ember-shadow: 0 0 18px rgba(255, 122, 26, 0.35);
+
+  /* Tipografia alinhada ao app */
+  --sl-font: 'Inter', system-ui, -apple-system, sans-serif;
+  --sl-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+  --forge-font-display: 'Big Shoulders Display', 'Inter', system-ui, sans-serif;
 }
 
+/* Modo claro harmonizado (pergaminho quente + bronze + brasa escura) */
 :root[data-theme='light'] {
-  --sl-color-accent-low: #fef3c7;
-  --sl-color-accent: #b45309;
-  --sl-color-accent-high: #78350f;
-  --forge-surface: #ffffff;
-  --forge-surface-elevated: #f8fafc;
-  --forge-border: #e2e8f0;
-  --forge-glow: rgba(245, 158, 11, 0.1);
+  --sl-color-accent-low: #ffedd5;
+  --sl-color-accent: #c2560c;
+  --sl-color-accent-high: #7c2d06;
+  --sl-color-white: #1b1612;
+  --sl-color-gray-1: #2a221b;
+  --sl-color-gray-2: #4a3c2e;
+  --sl-color-gray-3: #6e5c4b;
+  --sl-color-gray-4: #9c8875;
+  --sl-color-gray-5: #e4d8c8;
+  --sl-color-gray-6: #f5efe6;
+  --sl-color-black: #fbf8f3;
+
+  --sl-color-bg: #fbf8f3;
+  --sl-color-bg-nav: #f5efe6;
+  --sl-color-bg-sidebar: #f5efe6;
+  --sl-color-hairline-light: #e4d8c8;
+  --sl-color-hairline: #d6c6b2;
+
+  --forge-surface-card: #ffffff;
+  --forge-surface-elevated: #f5efe6;
+  --forge-border: #e4d8c8;
+  --forge-border-hover: #c9b59d;
+  --forge-glow: rgba(255, 122, 26, 0.12);
+  --forge-ember-shadow: 0 4px 16px rgba(194, 86, 12, 0.22);
 }
 
-/* Sutil brilho industrial no Hero da Landing Page (padrão limpo Starlight/Tauri) */
+/* Foco visível consistente com o app */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--forge-focus);
+  outline-offset: 2px;
+}
+
+/* Brilho sutil de brasa no Hero da Landing Page */
 [data-has-hero] .page {
   background: radial-gradient(
     ellipse 80% 420px at 50% -60px,
@@ -41,7 +98,12 @@
 }
 
 [data-has-hero] .hero h1 {
-  letter-spacing: -0.025em;
+  font-family: var(--forge-font-display);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: clamp(3rem, 7vw, 4.6rem);
+  line-height: 1;
 }
 
 /* Badges abaixo do Hero */
@@ -61,24 +123,20 @@
   font-weight: 600;
   letter-spacing: 0.01em;
   border: 1px solid var(--forge-border);
-  background: var(--forge-surface);
+  background: var(--forge-surface-card);
   color: var(--sl-color-gray-2);
 }
 
 .forge-badge--accent {
-  border-color: rgba(245, 158, 11, 0.45);
-  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(255, 122, 26, 0.5);
+  background: rgba(255, 122, 26, 0.14);
   color: var(--sl-color-accent-high);
 }
 
-:root[data-theme='light'] .forge-badge {
-  color: var(--sl-color-gray-2);
-}
-
 :root[data-theme='light'] .forge-badge--accent {
-  background: #fef3c7;
-  border-color: #f59e0b;
-  color: #78350f;
+  background: #ffedd5;
+  border-color: #ea580c;
+  color: #9a3412;
 }
 
 /* Showcase da Oficina de Estúdios */
@@ -86,9 +144,9 @@
   border: 1px solid var(--forge-border);
   border-radius: 1rem;
   overflow: hidden;
-  background: var(--forge-surface);
+  background: var(--forge-surface-card);
   margin: 1.5rem 0 2.75rem;
-  box-shadow: 0 20px 45px -24px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 22px 50px -24px rgba(0, 0, 0, 0.65);
 }
 
 .forge-showcase__bar {
@@ -127,7 +185,7 @@
   height: 0.6rem;
   border-radius: 9999px;
   background: var(--sl-color-gray-4);
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .forge-showcase__frame {
@@ -145,14 +203,14 @@
   height: auto;
   border-radius: 0.55rem;
   display: block;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--forge-border);
 }
 
 .forge-showcase__placeholder {
   text-align: center;
   max-width: 560px;
   padding: 1.5rem;
-  border: 1px dashed rgba(245, 158, 11, 0.45);
+  border: 1px dashed rgba(255, 122, 26, 0.45);
   border-radius: 0.75rem;
   background: var(--forge-surface-elevated);
 }
@@ -171,14 +229,14 @@
   padding: 0.75rem 0.9rem;
   border-radius: 0.65rem;
   border: 1px solid var(--forge-border);
-  background: var(--forge-surface);
+  background: var(--forge-surface-card);
   font-size: 0.82rem;
   text-decoration: none !important;
-  transition: border-color 140ms ease, transform 140ms ease;
+  transition: border-color 140ms ease, transform 140ms ease, background-color 140ms ease;
 }
 
 .forge-showcase__pill:hover {
-  border-color: rgba(245, 158, 11, 0.55);
+  border-color: var(--sl-color-accent);
   transform: translateY(-1px);
 }
 
@@ -207,7 +265,7 @@
   border: 1px solid var(--forge-border);
   border-radius: 0.9rem;
   padding: 1.25rem;
-  background: var(--forge-surface);
+  background: var(--forge-surface-card);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -222,15 +280,15 @@
   border-radius: 0.5rem;
   font-size: 0.82rem;
   font-weight: 800;
-  background: rgba(245, 158, 11, 0.14);
-  border: 1px solid rgba(245, 158, 11, 0.45);
+  background: rgba(255, 122, 26, 0.14);
+  border: 1px solid rgba(255, 122, 26, 0.5);
   color: var(--sl-color-accent-high);
   margin-bottom: 0.25rem;
 }
 
 :root[data-theme='light'] .forge-steps__num {
-  background: #fef3c7;
-  color: #78350f;
+  background: #ffedd5;
+  color: #9a3412;
 }
 
 .forge-steps__card strong {
@@ -257,15 +315,15 @@
   border: 1px solid var(--forge-border);
   border-radius: 0.95rem;
   padding: 1.35rem;
-  background: var(--forge-surface);
+  background: var(--forge-surface-card);
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
 }
 
 .forge-download-card--primary {
-  border-color: rgba(245, 158, 11, 0.55);
-  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.15);
+  border-color: rgba(255, 122, 26, 0.55);
+  box-shadow: 0 0 0 1px rgba(255, 122, 26, 0.16);
 }
 
 .forge-download-card strong {
@@ -282,7 +340,7 @@
   text-decoration: none !important;
   font-size: 0.9rem;
   margin-top: auto;
-  transition: opacity 140ms ease, border-color 140ms ease, transform 140ms ease;
+  transition: opacity 140ms ease, border-color 140ms ease, transform 140ms ease, box-shadow 140ms ease;
 }
 
 .forge-btn:hover {
@@ -290,16 +348,17 @@
 }
 
 .forge-btn--primary {
-  background: #f59e0b;
-  color: #0c0f14 !important;
+  background: #ff7a1a;
+  color: #0b0a09 !important;
+  box-shadow: var(--forge-ember-shadow);
 }
 
 .forge-btn--primary:hover {
-  opacity: 0.92;
+  background: #ffb25c;
 }
 
 .forge-btn--secondary {
-  border: 1px solid var(--sl-color-gray-4);
+  border: 1px solid var(--forge-border-hover);
   color: var(--sl-color-white) !important;
   background: transparent;
 }
