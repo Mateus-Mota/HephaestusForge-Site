@@ -48,14 +48,10 @@ export default defineConfig({
             content: 'https://hephaestusforge.vercel.app/og-image.png',
           },
         },
-        {
-          tag: 'script',
-          attrs: {
-            defer: true,
-            src: '/_vercel/insights/script.js',
-          },
-        },
       ],
+      components: {
+        Head: './src/components/Head.astro',
+      },
       defaultLocale: 'root',
       locales: {
         root: {
