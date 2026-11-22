@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "capture:screenshots": "node scripts/capture-screenshots.mjs",
-    "generate:og": "node scripts/generate-og.mjs"
+    "generate:og": "node scripts/generate-og.mjs",
+    "release:bump": "node scripts/bump-release.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.32.6",
