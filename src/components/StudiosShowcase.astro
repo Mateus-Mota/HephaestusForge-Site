@@ -12,6 +12,7 @@ const screenshotPublicPath = '/screenshots/studios-workbench.png';
 const screenshotDiskPath = path.join(process.cwd(), 'public', 'screenshots', 'studios-workbench.png');
 const hasScreenshot = fs.existsSync(screenshotDiskPath);
 const catalogBase = lang === 'pt' ? '/pt/guide/studios-catalog/' : '/guide/studios-catalog/';
+const dialogId = `forge-lightbox-${lang}`;
 
 const copy =
   lang === 'pt'
@@ -20,6 +21,8 @@ const copy =
         placeholderTitle: 'Espaço reservado para o print real da Oficina de Estúdios',
         placeholderBody:
           'Salve sua captura em public/screenshots/studios-workbench.png para exibi-la automaticamente aqui.',
+        zoomHint: 'Clique para ampliar',
+        closeLabel: 'Fechar visualização (Esc)',
         blocks: [
           {
             title: 'Arte 2D & Shaders',
@@ -48,6 +51,8 @@ const copy =
         placeholderTitle: 'Real Studios Workbench screenshot slot',
         placeholderBody:
           'Drop your screenshot at public/screenshots/studios-workbench.png to render it automatically here.',
+        zoomHint: 'Click to zoom',
+        closeLabel: 'Close preview (Esc)',
         blocks: [
           {
             title: '2D Art & Shaders',
@@ -84,7 +89,15 @@ const copy =
 
   <div class="forge-showcase__frame">
     {hasScreenshot ? (
-      <img src={screenshotPublicPath} alt={copy.windowTitle} loading="eager" />
+      <button
+        type="button"
+        class="forge-showcase__zoom-btn"
+        data-lightbox-open={dialogId}
+        aria-label={copy.zoomHint}
+      >
+        <img src={screenshotPublicPath} alt={copy.windowTitle} loading="eager" />
+        <span class="forge-showcase__zoom-pill">{copy.zoomHint}</span>
+      </button>
     ) : (
       <div class="forge-showcase__placeholder">
         <strong>{copy.placeholderTitle}</strong>
@@ -104,3 +117,32 @@ const copy =
     ))}
   </div>
 </div>
+
+{hasScreenshot && (
+  <dialog id={dialogId} class="forge-lightbox" aria-label={copy.windowTitle}>
+    <div class="forge-lightbox__bar">
+      <span>{copy.windowTitle}</span>
+      <button type="button" class="forge-lightbox__close" data-lightbox-close={dialogId}>
+        {copy.closeLabel}
+      </button>
+    </div>
+    <img src={screenshotPublicPath} alt={copy.windowTitle} />
+  </dialog>
+)}
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-lightbox-open]').forEach((btn) => {
+    const id = btn.dataset.lightboxOpen;
+    if (!id) return;
+    const dialog = document.getElementById(id) as HTMLDialogElement | null;
+    if (!dialog) return;
+
+    btn.addEventListener('click', () => dialog.showModal());
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+    dialog.querySelector(`[data-lightbox-close="${id}"]`)?.addEventListener('click', () => {
+      dialog.close();
+    });
+  });
+</script>

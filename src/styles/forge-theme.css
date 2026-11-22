@@ -98,7 +98,191 @@ button:focus-visible {
 }
 
 [data-has-hero] .hero img {
-  filter: drop-shadow(0 20px 42px rgba(255, 122, 26, 0.16));
+  filter: drop-shadow(0 20px 42px rgba(255, 122, 26, 0.18));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes forgeEmberPulse {
+    0%, 100% {
+      filter: drop-shadow(0 18px 36px rgba(255, 122, 26, 0.16));
+      transform: translateY(0px);
+    }
+    50% {
+      filter: drop-shadow(0 24px 48px rgba(255, 122, 26, 0.3));
+      transform: translateY(-3px);
+    }
+  }
+
+  [data-has-hero] .hero img {
+    animation: forgeEmberPulse 5.5s ease-in-out infinite;
+  }
+}
+
+/* Scrollbar fina igual ao app desktop */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--forge-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sl-color-gray-3);
+}
+
+/* Item ativo da sidebar da Wiki no estilo real do app (brasa translúcida + borda esquerda) */
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover,
+.sidebar-content a[aria-current='page']:focus {
+  background: rgba(255, 122, 26, 0.14);
+  color: #ffb25c;
+  border-left: 2px solid #ff7a1a;
+  border-radius: 0.35rem;
+  font-weight: 600;
+}
+
+:root[data-theme='light'] .sidebar-content a[aria-current='page'],
+:root[data-theme='light'] .sidebar-content a[aria-current='page']:hover,
+:root[data-theme='light'] .sidebar-content a[aria-current='page']:focus {
+  background: #ffedd5;
+  color: #9a3412;
+  border-left: 2px solid #ea580c;
+}
+
+/* Chips de código inline e callouts harmonizados dentro da Wiki */
+.sl-markdown-content :not(pre) > code {
+  background: var(--forge-surface-card);
+  border: 1px solid var(--forge-border);
+  border-radius: 0.35rem;
+  color: var(--sl-color-accent-high);
+  padding: 0.12rem 0.4rem;
+  font-size: 0.86em;
+}
+
+.starlight-aside {
+  border-radius: 0.7rem;
+  background: var(--forge-surface-elevated);
+}
+
+.starlight-aside--tip {
+  --sl-color-asides-border: #ff7a1a;
+  --sl-color-asides-text-accent: #ffb25c;
+}
+
+.starlight-aside--note {
+  --sl-color-asides-border: #5b8fc9;
+  --sl-color-asides-text-accent: #8ab4e6;
+}
+
+.starlight-aside--caution {
+  --sl-color-asides-border: #e8b931;
+  --sl-color-asides-text-accent: #d9b85c;
+}
+
+:root[data-theme='light'] .starlight-aside--tip {
+  --sl-color-asides-text-accent: #9a3412;
+}
+
+:root[data-theme='light'] .starlight-aside--note {
+  --sl-color-asides-text-accent: #1d4ed8;
+}
+
+:root[data-theme='light'] .starlight-aside--caution {
+  --sl-color-asides-text-accent: #92400e;
+}
+
+/* Lightbox (zoom) do Showcase */
+.forge-showcase__zoom-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+  border-radius: 0.55rem;
+  overflow: hidden;
+}
+
+.forge-showcase__zoom-pill {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.32rem 0.7rem;
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  background: rgba(15, 13, 12, 0.85);
+  border: 1px solid rgba(255, 122, 26, 0.45);
+  color: #efe5d8;
+  opacity: 0.88;
+  transition: opacity 150ms ease, border-color 150ms ease;
+}
+
+.forge-showcase__zoom-btn:hover .forge-showcase__zoom-pill {
+  opacity: 1;
+  border-color: #ff7a1a;
+}
+
+.forge-lightbox {
+  max-width: min(94vw, 1360px);
+  max-height: 92vh;
+  padding: 0;
+  margin: auto;
+  border: 1px solid rgba(255, 122, 26, 0.45);
+  border-radius: 0.9rem;
+  background: #0f0d0c;
+  color: #efe5d8;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+.forge-lightbox::backdrop {
+  background: rgba(11, 10, 9, 0.84);
+  backdrop-filter: blur(4px);
+}
+
+.forge-lightbox__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  background: #17130f;
+  border-bottom: 1px solid #33291f;
+  font-size: 0.82rem;
+  color: #c9b9a6;
+}
+
+.forge-lightbox__close {
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.45rem;
+  border: 1px solid #4a3c2e;
+  background: #201a15;
+  color: #efe5d8;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.forge-lightbox__close:hover {
+  border-color: #ff7a1a;
+  color: #ffb25c;
+}
+
+.forge-lightbox img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(92vh - 46px);
+  object-fit: contain;
 }
 
 [data-has-hero] .hero h1 {
