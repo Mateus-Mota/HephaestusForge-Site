@@ -1,6 +1,7 @@
 ---
 import fs from 'node:fs';
 import path from 'node:path';
+import { RELEASE } from '../data/release';
 
 interface Props {
   lang?: 'en' | 'pt';
@@ -15,7 +16,7 @@ const catalogBase = lang === 'pt' ? '/pt/guide/studios-catalog/' : '/guide/studi
 const copy =
   lang === 'pt'
     ? {
-        windowTitle: 'HephaestusForge v0.3.0 — Oficina de Estúdios (37 ferramentas integradas)',
+        windowTitle: `HephaestusForge ${RELEASE.version} — Oficina de Estúdios (37 ferramentas integradas)`,
         placeholderTitle: 'Espaço reservado para o print real da Oficina de Estúdios',
         placeholderBody:
           'Salve sua captura em public/screenshots/studios-workbench.png para exibi-la automaticamente aqui.',
@@ -43,7 +44,7 @@ const copy =
         ],
       }
     : {
-        windowTitle: 'HephaestusForge v0.3.0 — Studios Workbench (37 built-in tools)',
+        windowTitle: `HephaestusForge ${RELEASE.version} — Studios Workbench (37 built-in tools)`,
         placeholderTitle: 'Real Studios Workbench screenshot slot',
         placeholderBody:
           'Drop your screenshot at public/screenshots/studios-workbench.png to render it automatically here.',

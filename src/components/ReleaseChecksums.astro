@@ -1,0 +1,63 @@
+---
+import { RELEASE } from '../data/release';
+
+interface Props {
+  lang?: 'en' | 'pt';
+}
+
+const { lang = 'en' } = Astro.props;
+const isPt = lang === 'pt';
+const checksumsText = `${RELEASE.nsis.sha256}  ${RELEASE.nsis.filename}\n${RELEASE.msi.sha256}  ${RELEASE.msi.filename}`;
+const verifyCmd = `Get-FileHash -Algorithm SHA256 .\\${RELEASE.nsis.filename}`;
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>{isPt ? 'Formato' : 'Format'}</th>
+      <th>{isPt ? 'Recomendação' : 'Best For'}</th>
+      <th>{isPt ? 'Download Direto' : 'Direct Download'}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>{isPt ? 'Instalador NSIS (.exe)' : 'NSIS Installer (.exe)'}</strong></td>
+      <td>
+        {isPt
+          ? `Recomendado para a maioria dos usuários (instalação rápida por usuário, ~${RELEASE.nsis.sizePt})`
+          : `Recommended for most users (fast per-user setup, ~${RELEASE.nsis.sizeEn})`}
+      </td>
+      <td>
+        <a href={RELEASE.nsis.url}>
+          {isPt ? `Baixar ${RELEASE.nsis.filename}` : `Download ${RELEASE.nsis.filename}`}
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>{isPt ? 'Pacote Windows Installer (.msi)' : 'Windows Installer (.msi)'}</strong></td>
+      <td>
+        {isPt
+          ? `Recomendado para ambientes corporativos ou deploy via MSI (~${RELEASE.msi.sizePt})`
+          : `Recommended for managed/enterprise environments (~${RELEASE.msi.sizeEn})`}
+      </td>
+      <td>
+        <a href={RELEASE.msi.url}>
+          {isPt ? `Baixar ${RELEASE.msi.filename}` : `Download ${RELEASE.msi.filename}`}
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  {isPt ? 'Ver todas as versões públicas em ' : 'Browse all public releases on '}
+  <a href={RELEASE.releasesUrl}>GitHub Releases</a>.
+</p>
+
+<h3>{isPt ? `Checksums SHA-256 (${RELEASE.version})` : `SHA-256 Checksums (${RELEASE.version})`}</h3>
+
+<pre><code>{checksumsText}</code></pre>
+
+<p>{isPt ? 'Verifique no PowerShell:' : 'Verify in PowerShell:'}</p>
+
+<pre><code>{verifyCmd}</code></pre>

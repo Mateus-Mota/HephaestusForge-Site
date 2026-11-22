@@ -48,6 +48,13 @@ export default defineConfig({
             content: 'https://hephaestusforge.vercel.app/og-image.png',
           },
         },
+        {
+          tag: 'script',
+          attrs: {
+            defer: true,
+            src: '/_vercel/insights/script.js',
+          },
+        },
       ],
       defaultLocale: 'root',
       locales: {
@@ -113,6 +120,11 @@ export default defineConfig({
               label: 'Studios Catalog (Blocks A–H)',
               translations: { 'pt-BR': 'Catálogo de Estúdios (A–H)' },
               slug: 'guide/studios-catalog',
+            },
+            {
+              label: 'File Formats & Schemas',
+              translations: { 'pt-BR': 'Formatos de Arquivo & Schemas' },
+              slug: 'guide/file-formats',
             },
             {
               label: 'Keyboard Shortcuts',
