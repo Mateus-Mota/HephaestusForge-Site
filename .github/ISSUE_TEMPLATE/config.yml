@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Official Wiki & Documentation
+    url: https://hephaestusforge.vercel.app/guide/getting-started/
+    about: Read guides, keyboard shortcuts, and troubleshooting before opening an issue.
+  - name: Downloads (Latest Windows Installers)
+    url: https://hephaestusforge.vercel.app/downloads/
+    about: Download the latest official NSIS (.exe) or MSI installer.

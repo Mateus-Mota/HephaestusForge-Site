@@ -13,8 +13,21 @@ description: Baixe os instaladores oficiais do HephaestusForge para Windows (NSI
 Ver todas as versões públicas em [GitHub Releases](https://github.com/Mateus-Mota/HephaestusForge-Site/releases).
 
 :::note[Aviso do Windows SmartScreen]
-Como as primeiras versões indie ainda não possuem certificado comercial EV de assinatura de código, o Windows SmartScreen pode exibir *"O Windows protegeu o computador"* na primeira execução. Clique em **Mais informações → Executar assim mesmo** se você baixou o instalador diretamente desta página oficial ou das Releases no GitHub.
+Como as primeiras versões indie ainda não possuem certificado comercial EV de assinatura de código, o Windows SmartScreen pode exibir *"O Windows protegeu o computador"* na primeira execução. Clique em **Mais informações → Executar assim mesmo** se você baixou o instalador diretamente desta página oficial ou das Releases no GitHub, e valide o hash SHA-256 abaixo se desejar.
 :::
+
+## Checksums SHA-256 (`v0.3.0`)
+
+```text
+f239c1e782c6d2d5c6a53d10cf8e3dfcbe927693bbcf0d428d66935b7ec4cf67  HephaestusForge_0.3.0_x64-setup.exe
+2793fbede92226962aa541feae1f406d43cababc2e41c5172cba43cd4dfd6268  HephaestusForge_0.3.0_x64_en-US.msi
+```
+
+Verifique no PowerShell:
+
+```powershell
+Get-FileHash -Algorithm SHA256 .\HephaestusForge_0.3.0_x64-setup.exe
+```
 
 ## Requisitos de Sistema
 - **Windows 10 ou Windows 11 (64-bit)**
@@ -26,4 +39,4 @@ Você pode usar o endereço curto `/download` para redirecionar diretamente para
 :::
 
 ## Próximo Passo
-Após instalar, abra o guia **[Primeiros Passos & Ritual de Criação](/pt/guide/getting-started/)**.
+Após instalar, abra o guia **[Primeiros Passos & Ritual de Criação](/pt/guide/getting-started/)**. Encontrou um bug ou tem uma sugestão? Abra uma issue em **[GitHub Issues](https://github.com/Mateus-Mota/HephaestusForge-Site/issues/new/choose)**.

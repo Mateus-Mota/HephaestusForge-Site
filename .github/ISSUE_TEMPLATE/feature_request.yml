@@ -1,0 +1,33 @@
+name: Feature Request
+description: Suggest a new studio, workflow improvement, or Wiki guide for HephaestusForge.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Category
+      options:
+        - New Studio / Tool
+        - Godot 4 Integration
+        - GDD / Kanban / Project Map
+        - AI Skills & Prompt Studio
+        - Wiki / Documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem or workflow would this improve?
+      description: Describe what you are trying to accomplish when building your game.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Share how you imagine this working inside HephaestusForge.
+    validations:
+      required: true
