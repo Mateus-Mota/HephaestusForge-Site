@@ -1,0 +1,20 @@
+/* Identidade visual industrial da Forja (âmbar + grafite) sobre o tema Starlight */
+:root {
+  --sl-color-accent-low: #3b2306;
+  --sl-color-accent: #f59e0b;
+  --sl-color-accent-high: #fde68a;
+  --sl-color-white: #f8fafc;
+  --sl-color-gray-1: #e2e8f0;
+  --sl-color-gray-2: #cbd5e1;
+  --sl-color-gray-3: #94a3b8;
+  --sl-color-gray-4: #475569;
+  --sl-color-gray-5: #1e242d;
+  --sl-color-gray-6: #13171d;
+  --sl-color-black: #0c0f14;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #fef3c7;
+  --sl-color-accent: #b45309;
+  --sl-color-accent-high: #78350f;
+}
