@@ -94,16 +94,178 @@ button:focus-visible {
 }
 
 [data-has-hero] .hero {
-  padding-block: clamp(2.5rem, 6vw, 4.75rem) clamp(1.5rem, 3vw, 2.5rem);
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 3vw, 2.25rem);
+}
+
+[data-has-hero] .hero img {
+  filter: drop-shadow(0 20px 42px rgba(255, 122, 26, 0.16));
 }
 
 [data-has-hero] .hero h1 {
   font-family: var(--forge-font-display);
   font-weight: 800;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-size: clamp(3.1rem, 7vw, 4.8rem);
+  line-height: 0.98;
+}
+
+/* CTAs do Hero unificados com a brasa #ff7a1a + glow ember */
+[data-has-hero] .hero .sl-link-button.primary {
+  background: #ff7a1a;
+  border-color: #ff7a1a;
+  color: #0b0a09;
+  font-weight: 700;
+  box-shadow: var(--forge-ember-shadow);
+  transition: background-color 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+}
+
+[data-has-hero] .hero .sl-link-button.primary:hover {
+  background: #ffb25c;
+  border-color: #ffb25c;
+  transform: translateY(-1px);
+}
+
+[data-has-hero] .hero .sl-link-button.minimal {
+  border: 1px solid var(--forge-border-hover);
+  border-radius: 9999px;
+  padding-inline: 1.15rem;
+  color: var(--sl-color-white);
+  transition: border-color 140ms ease, color 140ms ease;
+}
+
+[data-has-hero] .hero .sl-link-button.minimal:hover {
+  border-color: var(--sl-color-accent);
+  color: var(--sl-color-accent-high);
+}
+
+/* Cabeçalhos de seção da Home com eyebrow industrial + Display voice */
+.forge-section-head {
+  margin-top: 3.25rem !important;
+  padding-top: 2rem;
+  border-top: 1px solid var(--forge-border);
+}
+
+.forge-eyebrow {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sl-color-accent);
+}
+
+[data-has-hero] .forge-section-head + h2 {
+  margin-top: 0.35rem !important;
+  font-family: var(--forge-font-display);
+  font-weight: 800;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  font-size: clamp(3rem, 7vw, 4.6rem);
-  line-height: 1;
+  font-size: clamp(2rem, 4vw, 2.55rem);
+  line-height: 1.05;
+}
+
+/* Harmonização dos cards do Starlight com a paleta Forja Viva */
+[data-has-hero] .card-grid .card {
+  background: var(--forge-surface-card);
+  border: 1px solid var(--forge-border);
+  border-radius: 0.9rem;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+
+[data-has-hero] .card-grid .card:hover {
+  border-color: rgba(255, 122, 26, 0.55);
+  transform: translateY(-2px);
+}
+
+[data-has-hero] .card-grid .card:nth-child(1) .icon {
+  --sl-card-border: rgba(255, 122, 26, 0.45);
+  --sl-card-bg: rgba(255, 122, 26, 0.14);
+  color: #ffb25c;
+}
+
+[data-has-hero] .card-grid .card:nth-child(2) .icon {
+  --sl-card-border: rgba(217, 184, 92, 0.45);
+  --sl-card-bg: rgba(217, 184, 92, 0.14);
+  color: #d9b85c;
+}
+
+[data-has-hero] .card-grid .card:nth-child(3) .icon {
+  --sl-card-border: rgba(95, 174, 110, 0.45);
+  --sl-card-bg: rgba(95, 174, 110, 0.14);
+  color: #8fd09a;
+}
+
+[data-has-hero] .card-grid .card:nth-child(4) .icon {
+  --sl-card-border: rgba(91, 143, 201, 0.45);
+  --sl-card-bg: rgba(91, 143, 201, 0.14);
+  color: #8ab4e6;
+}
+
+[data-has-hero] .card-grid .card:nth-child(5) .icon {
+  --sl-card-border: rgba(160, 122, 200, 0.45);
+  --sl-card-bg: rgba(160, 122, 200, 0.14);
+  color: #b393d9;
+}
+
+[data-has-hero] .card-grid .card:nth-child(6) .icon {
+  --sl-card-border: rgba(224, 69, 15, 0.45);
+  --sl-card-bg: rgba(224, 69, 15, 0.14);
+  color: #ff7a1a;
+}
+
+/* Rodapé limpo da Landing Page */
+.forge-footer {
+  margin-top: 3.5rem;
+  padding: 2rem 0 1rem;
+  border-top: 1px solid var(--forge-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.forge-footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.forge-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.forge-footer__brand strong {
+  font-family: var(--forge-font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--sl-color-white);
+}
+
+.forge-footer__brand span {
+  font-size: 0.84rem;
+  color: var(--sl-color-gray-3);
+}
+
+.forge-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.35rem;
+  font-size: 0.86rem;
+}
+
+.forge-footer__links a {
+  color: var(--sl-color-gray-2);
+  text-decoration: none;
+  transition: color 140ms ease;
+}
+
+.forge-footer__links a:hover {
+  color: var(--sl-color-accent-high);
 }
 
 /* Badges abaixo do Hero */

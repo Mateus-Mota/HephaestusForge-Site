@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" fill="none">
+  <defs>
+    <radialGradient id="emberHalo" cx="50%" cy="46%" r="50%">
+      <stop offset="0%" stop-color="#FF7A1A" stop-opacity="0.34"/>
+      <stop offset="48%" stop-color="#E0450F" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0F0D0C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shieldBg" x1="210" y1="68" x2="210" y2="352" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#201A15"/>
+      <stop offset="100%" stop-color="#120F0D"/>
+    </linearGradient>
+    <linearGradient id="shieldBorder" x1="210" y1="68" x2="210" y2="352" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFB25C" stop-opacity="0.7"/>
+      <stop offset="45%" stop-color="#FF7A1A" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4A3C2E" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="flameMain" x1="210" y1="108" x2="210" y2="238" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF1D0"/>
+      <stop offset="0.38%" stop-color="#FFF1D0"/>
+      <stop offset="48%" stop-color="#FF7A1A"/>
+      <stop offset="100%" stop-color="#E0450F"/>
+    </linearGradient>
+    <linearGradient id="anvilGrad" x1="126" y1="250" x2="294" y2="292" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFB25C"/>
+      <stop offset="50%" stop-color="#FF7A1A"/>
+      <stop offset="100%" stop-color="#C2560C"/>
+    </linearGradient>
+    <filter id="softGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Halo de brasa -->
+  <circle cx="210" cy="204" r="196" fill="url(#emberHalo)"/>
+
+  <!-- Anéis industriais concêntricos -->
+  <circle cx="210" cy="210" r="176" stroke="#33291F" stroke-width="1.25" stroke-dasharray="6 8"/>
+  <circle cx="210" cy="210" r="146" stroke="#4A3C2E" stroke-width="1" stroke-opacity="0.65"/>
+
+  <!-- Marcadores cardinais -->
+  <line x1="210" y1="22" x2="210" y2="38" stroke="#FF7A1A" stroke-width="2" stroke-linecap="round"/>
+  <line x1="210" y1="382" x2="210" y2="398" stroke="#4A3C2E" stroke-width="2" stroke-linecap="round"/>
+  <line x1="22" y1="210" x2="38" y2="210" stroke="#4A3C2E" stroke-width="2" stroke-linecap="round"/>
+  <line x1="382" y1="210" x2="398" y2="210" stroke="#4A3C2E" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Octógono / placa forjada central -->
+  <rect x="82" y="82" width="256" height="256" rx="46" fill="url(#shieldBg)" stroke="url(#shieldBorder)" stroke-width="2.5"/>
+  <rect x="94" y="94" width="232" height="232" rx="36" stroke="#33291F" stroke-width="1.2"/>
+
+  <!-- Faíscas flutuantes -->
+  <circle cx="152" cy="144" r="3" fill="#FFB25C" fill-opacity="0.85"/>
+  <circle cx="272" cy="134" r="2.5" fill="#FFF1D0" fill-opacity="0.8"/>
+  <circle cx="284" cy="176" r="2" fill="#FF7A1A" fill-opacity="0.75"/>
+  <circle cx="136" cy="186" r="2" fill="#FF7A1A" fill-opacity="0.6"/>
+
+  <!-- Chama da Forja -->
+  <g filter="url(#softGlow)">
+    <path d="M210 112C229 144 254 165 254 196C254 221 234 239 210 239C186 239 166 221 166 196C166 177 176 161 188 148C187 161 193 169 201 172C197 151 200 130 210 112Z" fill="url(#flameMain)"/>
+    <path d="M210 162C219 177 229 187 229 201C229 212 220 221 210 221C200 221 191 212 191 201C191 192 196 184 202 178C202 184 205 188 208 190C206 180 207 171 210 162Z" fill="#FFF1D0" fill-opacity="0.9"/>
+  </g>
+
+  <!-- Bigorna estilizada -->
+  <path d="M132 252H288L271 282C268.2 287 262.9 290 257.2 290H162.8C157.1 290 151.8 287 149 282L132 252Z" fill="url(#anvilGrad)"/>
+  <rect x="158" y="298" width="104" height="14" rx="7" fill="#FFB25C"/>
+  <rect x="176" y="316" width="68" height="4" rx="2" fill="#4A3C2E"/>
+</svg>

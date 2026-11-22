@@ -1,0 +1,55 @@
+---
+import { RELEASE } from '../data/release';
+
+interface Props {
+  lang?: 'en' | 'pt';
+}
+
+const { lang = 'en' } = Astro.props;
+const isPt = lang === 'pt';
+const prefix = isPt ? '/pt' : '';
+
+const copy = isPt
+  ? {
+      tagline: '100% Local-First • File-over-App • Zero Telemetria • Pronto para Godot 4',
+      links: [
+        { label: 'Primeiros Passos', href: `${prefix}/guide/getting-started/` },
+        { label: 'Catálogo de Estúdios', href: `${prefix}/guide/studios-catalog/` },
+        { label: 'Formatos de Arquivo', href: `${prefix}/guide/file-formats/` },
+        { label: 'Atalhos', href: `${prefix}/guide/shortcuts/` },
+        { label: 'FAQ', href: `${prefix}/guide/faq/` },
+        { label: `Downloads (${RELEASE.version})`, href: `${prefix}/downloads/` },
+        { label: 'GitHub Releases', href: RELEASE.releasesUrl },
+        { label: 'Reportar Bug / Sugestão', href: RELEASE.issuesUrl },
+      ],
+    }
+  : {
+      tagline: '100% Local-First • File-over-App • Zero Telemetry • Godot 4 Ready',
+      links: [
+        { label: 'Quick Start', href: `${prefix}/guide/getting-started/` },
+        { label: 'Studios Catalog', href: `${prefix}/guide/studios-catalog/` },
+        { label: 'File Formats', href: `${prefix}/guide/file-formats/` },
+        { label: 'Shortcuts', href: `${prefix}/guide/shortcuts/` },
+        { label: 'FAQ', href: `${prefix}/guide/faq/` },
+        { label: `Downloads (${RELEASE.version})`, href: `${prefix}/downloads/` },
+        { label: 'GitHub Releases', href: RELEASE.releasesUrl },
+        { label: 'Report a Bug / Feedback', href: RELEASE.issuesUrl },
+      ],
+    };
+---
+
+<footer class="forge-footer">
+  <div class="forge-footer__top">
+    <div class="forge-footer__brand">
+      <strong>HephaestusForge</strong>
+      <span>{copy.tagline}</span>
+    </div>
+    <span class="forge-badge forge-badge--accent">{RELEASE.version} • Windows x64</span>
+  </div>
+
+  <nav class="forge-footer__links" aria-label={isPt ? 'Links úteis' : 'Useful links'}>
+    {copy.links.map((item) => (
+      <a href={item.href}>{item.label}</a>
+    ))}
+  </nav>
+</footer>

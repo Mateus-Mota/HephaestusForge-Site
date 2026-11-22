@@ -2,9 +2,13 @@
 title: File-over-App Workbench for Godot 4
 description: File-over-app desktop workbench for indie game development — live GDD, Kanban, Knowledge Graph, 37 built-in studios, and direct Godot 4 integration.
 template: splash
+editUrl: false
 hero:
   title: HephaestusForge
   tagline: Your file-over-app desktop workbench for game development — live GDD, Kanban, Knowledge Graph, 37 built-in studios, and one-click Godot 4 Play (F5).
+  image:
+    file: ../../assets/forge-hero.svg
+    alt: HephaestusForge glowing forge emblem
   actions:
     - text: Download v0.3.0 (Windows)
       link: '#download'
@@ -20,6 +24,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 import StudiosShowcase from '../../components/StudiosShowcase.astro';
 import WorkflowSteps from '../../components/WorkflowSteps.astro';
 import DownloadBanner from '../../components/DownloadBanner.astro';
+import LandingFooter from '../../components/LandingFooter.astro';
 
 <div class="forge-badges">
   <span class="forge-badge forge-badge--accent">v0.3.0 • Windows 10/11 (x64)</span>
@@ -28,9 +33,17 @@ import DownloadBanner from '../../components/DownloadBanner.astro';
   <span class="forge-badge">Godot 4 Ready</span>
 </div>
 
+<div class="forge-section-head">
+  <span class="forge-eyebrow">Workbench</span>
+</div>
+
 ## Inside the Workbench — 37 Built-in Studios
 
 <StudiosShowcase lang="en" />
+
+<div class="forge-section-head">
+  <span class="forge-eyebrow">Capabilities</span>
+</div>
 
 ## What's Inside HephaestusForge
 
@@ -55,12 +68,20 @@ import DownloadBanner from '../../components/DownloadBanner.astro';
   </Card>
 </CardGrid>
 
+<div class="forge-section-head">
+  <span class="forge-eyebrow">Workflow</span>
+</div>
+
 ## From Zero to Playable (F5) in 3 Steps
 
 <WorkflowSteps lang="en" />
+
+<div class="forge-section-head">
+  <span class="forge-eyebrow">Get Started</span>
+</div>
 
 ## Download v0.3.0
 
 <DownloadBanner lang="en" />
 
-Need installation requirements, keyboard shortcuts, or answers to common questions? Check **[Downloads](/downloads/)**, **[Keyboard Shortcuts](/guide/shortcuts/)**, **[FAQ](/guide/faq/)**, **[Changelog](/changelog/)**, or start with **[Quick Start & Creation Ritual](/guide/getting-started/)**.
+<LandingFooter lang="en" />

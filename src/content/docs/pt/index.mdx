@@ -2,9 +2,13 @@
 title: Estação File-over-App para Godot 4
 description: Estação de trabalho desktop file-over-app para desenvolvimento de jogos — GDD vivo, Kanban, Grafo de Conhecimento, 37 estúdios internos e integração direta com Godot 4.
 template: splash
+editUrl: false
 hero:
   title: HephaestusForge
   tagline: Sua estação desktop file-over-app para criar jogos — GDD vivo, Kanban, Grafo de Conhecimento, 37 estúdios internos e Play (F5) direto no Godot 4.
+  image:
+    file: ../../../assets/forge-hero.svg
+    alt: Emblema industrial da Forja HephaestusForge
   actions:
     - text: Baixar v0.3.0 (Windows)
       link: '#download'
@@ -20,6 +24,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 import StudiosShowcase from '../../../components/StudiosShowcase.astro';
 import WorkflowSteps from '../../../components/WorkflowSteps.astro';
 import DownloadBanner from '../../../components/DownloadBanner.astro';
+import LandingFooter from '../../../components/LandingFooter.astro';
 
 <div class="forge-badges">
   <span class="forge-badge forge-badge--accent">v0.3.0 • Windows 10/11 (x64)</span>
@@ -28,9 +33,17 @@ import DownloadBanner from '../../../components/DownloadBanner.astro';
   <span class="forge-badge">Pronto para Godot 4</span>
 </div>
 
+<div class="forge-section-head">
+  <span class="forge-eyebrow">Oficina</span>
+</div>
+
 ## Por dentro da Oficina — 37 Estúdios Integrados
 
 <StudiosShowcase lang="pt" />
+
+<div class="forge-section-head">
+  <span class="forge-eyebrow">Recursos</span>
+</div>
 
 ## O que tem dentro do HephaestusForge
 
@@ -55,12 +68,20 @@ import DownloadBanner from '../../../components/DownloadBanner.astro';
   </Card>
 </CardGrid>
 
+<div class="forge-section-head">
+  <span class="forge-eyebrow">Fluxo de Trabalho</span>
+</div>
+
 ## Do zero ao Play (F5) em 3 passos
 
 <WorkflowSteps lang="pt" />
+
+<div class="forge-section-head">
+  <span class="forge-eyebrow">Comece Agora</span>
+</div>
 
 ## Download v0.3.0
 
 <DownloadBanner lang="pt" />
 
-Precisa de requisitos de sistema, atalhos ou respostas rápidas? Acesse **[Downloads](/pt/downloads/)**, **[Atalhos de Teclado](/pt/guide/shortcuts/)**, **[FAQ](/pt/guide/faq/)**, **[Changelog](/pt/changelog/)** ou comece por **[Primeiros Passos & Ritual de Criação](/pt/guide/getting-started/)**.
+<LandingFooter lang="pt" />
