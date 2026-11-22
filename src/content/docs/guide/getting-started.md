@@ -1,34 +1,34 @@
 ---
-title: Primeiros Passos & Ritual de Criação
-description: Caminho mais curto entre instalar o HephaestusForge e rodar seu primeiro projeto Godot 4 com Play (F5).
+title: Quick Start & Creation Ritual
+description: The shortest path from installing HephaestusForge to running your first playable Godot 4 project with Play (F5).
 ---
 
-Este guia cobre o caminho mais curto entre abrir o **HephaestusForge** pela primeira vez e ter um projeto estruturado rodando na sua engine.
+This guide covers the fastest path from opening **HephaestusForge** for the first time to running a structured game project in your engine.
 
-## 1. Requisitos Recomendados
+## 1. Recommended Requirements
 
-- **Sistema Operacional**: Windows 10/11 (x64) com WebView2 Runtime (já incluso no Windows 11).
-- **Engine de Jogo** *(opcional, mas recomendada para o botão `Play F5`)*:
-  - **Godot 4.x** instalada localmente ou no `PATH`.
-- **Git** *(opcional)*: habilita branch por tarefa, status em tempo real e commit assistido no Kanban.
-- **Biblioteca local de Starter Packs (Kenney CC0)** *(opcional)*: permite começar um projeto novo já com sprites, tiles e áudio prontos — veja o passo a passo em [Biblioteca Local de Assets & Starter Packs](/guide/assets-and-starter-packs/).
+- **Operating System**: Windows 10/11 (x64) with WebView2 Runtime (pre-installed on Windows 11).
+- **Game Engine** *(optional, recommended for `Play F5`)*:
+  - **Godot 4.x** installed locally or available in `PATH`.
+- **Git** *(optional)*: enables per-task branches, live status, and assisted commits from Kanban.
+- **Local Kenney Starter Packs Library (CC0)** *(optional)*: bootstraps new projects with ready-to-use sprites, tiles, and audio — see [Local Assets, Starter Packs & External Tools](/guide/assets-and-starter-packs/).
 
-## 2. Criando um Novo Jogo pelo Ritual
+## 2. Creating a New Game via the Ritual
 
-1. No **Menu Principal**, clique em **Novo Jogo** (ou abra um workspace existente).
-2. Informe o **nome do projeto**, a **pasta de destino** e a **engine alvo** (ex.: Godot 4).
-3. *(Opcional)* Escolha um **Starter Pack** da sua biblioteca local de kits Kenney.
-4. Ao finalizar o Ritual, o HephaestusForge gera automaticamente:
-   - Estrutura de documentação viva (`docs/gdd/`, `docs/coordination/tasks/`, `docs/coordination/decisions/`).
-   - Manifesto de assets iniciais (`.forge/starter_assets.json`).
-   - **Cena Principal jogável** (em projetos Godot 2D com Starter Pack), já com chão visível, sala dimensionada e plataforma alcançável.
+1. From the **Main Menu**, click **New Game** (or open an existing workspace).
+2. Enter your **project name**, **destination folder**, and **target engine** (e.g., Godot 4).
+3. *(Optional)* Pick a **Starter Pack** from your local Kenney library.
+4. When the Ritual finishes, HephaestusForge automatically generates:
+   - Living documentation structure (`docs/gdd/`, `docs/coordination/tasks/`, `docs/coordination/decisions/`).
+   - Initial asset manifest (`.forge/starter_assets.json`).
+   - **Playable main scene** (for Godot 2D projects with a Starter Pack), complete with visible ground, sized room, and reachable platform.
 
-## 3. Rodando o Jogo (`Play / F5`) e Usando os Estúdios
+## 3. Running Your Game (`Play / F5`) & Using the Studios
 
-- Clique em **Play (`F5`)** na barra superior para abrir ou executar o projeto diretamente na **Godot**.
-- Abra **Estúdios** (a Oficina) para criar animações de sprite, shaders 2D, HUD ou colisões de tilemap.
-- Ao exportar um artefato de um estúdio 2D (*Sprite Animation*, *Shader VFX 2D*, *HUD* ou *Tilemap*), clique em **"Usar na cena principal"** para conectar o arquivo gerado diretamente aos slots da cena principal em `.forge/starter_assets.json`.
+- Click **Play (`F5`)** in the top bar to run your project directly in **Godot**.
+- Open **Studios** (the Workbench) to author sprite animations, 2D shaders, HUD layouts, or tilemap collisions.
+- When exporting from a 2D studio (*Sprite Animation*, *Shader VFX 2D*, *HUD*, or *Tilemap*), click **"Use in main scene"** to wire the output directly into `.forge/starter_assets.json`.
 
-## 4. Tour do Aprendiz (*Forja Viva*)
+## 4. Apprentice Tour
 
-Se quiser conhecer a interface sem risco de mexer no seu projeto real, abra a demo **`ForgePong`** no Menu Principal e inicie o **Tour do Aprendiz**. Você pode avançar, usar o botão **Voltar** em qualquer parada ou pular o tour quando quiser.
+If you want to explore the interface safely without touching your own project, open the bundled **`ForgePong`** demo from the Main Menu and start the **Apprentice Tour**. You can move forward, go **Back** at any stop, or skip at any time.

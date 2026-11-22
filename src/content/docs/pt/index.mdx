@@ -1,0 +1,60 @@
+---
+title: HephaestusForge
+description: Estação de trabalho desktop file-over-app para desenvolvimento de jogos — GDD vivo, Kanban, Grafo de Conhecimento, 36 estúdios internos e integração direta com Godot 4.
+template: splash
+hero:
+  tagline: Sua estação desktop file-over-app para criar jogos — GDD vivo, Kanban, Grafo de Conhecimento, 36 estúdios internos e Play (F5) direto no Godot 4.
+  actions:
+    - text: Baixar v0.3.0 (Windows)
+      link: '#download'
+      icon: right-arrow
+      variant: primary
+    - text: Explorar a Wiki
+      link: /pt/guide/getting-started/
+      icon: open-book
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import StudiosShowcase from '../../../components/StudiosShowcase.astro';
+import DownloadBanner from '../../../components/DownloadBanner.astro';
+
+<div class="forge-badges">
+  <span class="forge-badge forge-badge--accent">v0.3.0 • Windows 10/11 (x64)</span>
+  <span class="forge-badge">Tauri v2 + Rust (~10 MiB)</span>
+  <span class="forge-badge">100% File-over-App</span>
+  <span class="forge-badge">Pronto para Godot 4</span>
+</div>
+
+## Por dentro da Oficina — 36 Estúdios Integrados
+
+<StudiosShowcase lang="pt" />
+
+## O que tem dentro do HephaestusForge
+
+<CardGrid stagger>
+  <Card title="100% File-over-App (Zero Lock-in)" icon="document">
+    Todo GDD, tarefa do Kanban, ADR, fluxo narrativo e skill de IA vive em arquivos reais `.md` e `.json` dentro do repositório Git do seu jogo. Sem banco de dados proprietário.
+  </Card>
+  <Card title="36 Estúdios Internos + Godot 4" icon="puzzle">
+    Animação de Sprites, Shader VFX 2D, HUD, Tilemap Collision, Sintetizador SFX, Frame Data de Combate, Diálogos, Zonas de Câmera e Parallax 2D — exportando `.tres`, `.tscn`, `.gd` e `.gdshader` direto no projeto.
+  </Card>
+  <Card title="Kanban ligado ao Git e Play (F5)" icon="approve-check-circle">
+    Arraste cards entre colunas com arquivos JSON limpos (LexoRank), sugestão de branch por tarefa e execução imediata do jogo com `F5`.
+  </Card>
+  <Card title="Catálogo de Assets & Starter Packs Kenney" icon="open-book">
+    Aponte para sua biblioteca local de pacotes `.zip` CC0 do Kenney para iniciar projetos Godot 2D já jogáveis e auditar sprites, áudio e malhas 3D com `.forge/asset_spec.json`.
+  </Card>
+  <Card title="Workspace Customizável & Skills de IA" icon="setting">
+    Fixe, desafixe e reordene qualquer módulo da barra lateral, use o Prompt Studio com contexto vivo e explore o Radar de Ferramentas Públicas.
+  </Card>
+  <Card title="Core Nativo em Rust (Tauri v2)" icon="rocket">
+    Instalador leve (~10 MiB), boot instantâneo, escrita atômica com ETag/SHA-256 e zero portas TCP abertas na máquina.
+  </Card>
+</CardGrid>
+
+## Download v0.3.0
+
+<DownloadBanner lang="pt" />
+
+Precisa de requisitos de sistema, changelog ou passo a passo? Acesse **[Downloads](/pt/downloads/)**, **[Changelog](/pt/changelog/)** ou comece por **[Primeiros Passos & Ritual de Criação](/pt/guide/getting-started/)**.

@@ -1,0 +1,52 @@
+---
+interface Props {
+  lang?: 'en' | 'pt';
+}
+
+const { lang = 'en' } = Astro.props;
+const baseReleaseUrl =
+  'https://github.com/Mateus-Mota/HephaestusForge-Site/releases/download/v0.3.0';
+
+const copy =
+  lang === 'pt'
+    ? {
+        nsisTitle: 'Instalador Windows (.exe)',
+        nsisBadge: 'Recomendado • 9,95 MiB',
+        nsisDesc: 'Instalação rápida por usuário (NSIS). Ideal para uso pessoal no Windows 10/11 x64.',
+        nsisCta: 'Baixar Setup .exe (v0.3.0)',
+        msiTitle: 'Pacote Windows Installer (.msi)',
+        msiBadge: 'MSI • 13,73 MiB',
+        msiDesc: 'Pacote padrão MSI para instalação gerenciada ou distribuição corporativa.',
+        msiCta: 'Baixar Pacote .msi (v0.3.0)',
+      }
+    : {
+        nsisTitle: 'Windows Installer (.exe)',
+        nsisBadge: 'Recommended • 9.95 MiB',
+        nsisDesc: 'Fast per-user NSIS installer. Recommended for Windows 10/11 (x64).',
+        nsisCta: 'Download Setup .exe (v0.3.0)',
+        msiTitle: 'Windows Installer Package (.msi)',
+        msiBadge: 'MSI • 13.73 MiB',
+        msiDesc: 'Standard MSI package for managed environments and enterprise deployment.',
+        msiCta: 'Download .msi Package (v0.3.0)',
+      };
+---
+
+<div class="forge-download-box" id="download">
+  <div class="forge-download-card forge-download-card--primary">
+    <span class="forge-badge forge-badge--accent" style="width: fit-content;">{copy.nsisBadge}</span>
+    <strong style="font-size: 1.05rem;">{copy.nsisTitle}</strong>
+    <p style="margin: 0; font-size: 0.88rem; color: var(--sl-color-gray-3);">{copy.nsisDesc}</p>
+    <a class="forge-btn forge-btn--primary" href={`${baseReleaseUrl}/HephaestusForge_0.3.0_x64-setup.exe`}>
+      {copy.nsisCta}
+    </a>
+  </div>
+
+  <div class="forge-download-card">
+    <span class="forge-badge" style="width: fit-content;">{copy.msiBadge}</span>
+    <strong style="font-size: 1.05rem;">{copy.msiTitle}</strong>
+    <p style="margin: 0; font-size: 0.88rem; color: var(--sl-color-gray-3);">{copy.msiDesc}</p>
+    <a class="forge-btn forge-btn--secondary" href={`${baseReleaseUrl}/HephaestusForge_0.3.0_x64_en-US.msi`}>
+      {copy.msiCta}
+    </a>
+  </div>
+</div>

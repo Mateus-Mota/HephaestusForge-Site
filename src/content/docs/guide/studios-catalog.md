@@ -1,61 +1,61 @@
 ---
-title: Catálogo de Estúdios da Forja (Blocos A–H)
-description: Visão prática de todos os estúdios autorais internos do HephaestusForge e dos arquivos gerados para Godot 4.
+title: Studios Catalog (Blocks A–H)
+description: Practical overview of all 36 built-in studios inside HephaestusForge and the files they export for Godot 4.
 ---
 
-O módulo **Estúdios** reúne todas as ferramentas autorais internas do **HephaestusForge** em uma bancada unificada, organizada por disciplina de produção. Cada estúdio grava artefatos diretamente na pasta do projeto (*file-over-app*) prontos para consumo na engine (especialmente **Godot 4**).
+The **Studios** module unifies all internal authoring tools inside **HephaestusForge**, organized by production discipline. Every studio writes real files directly into your project (*file-over-app*) ready for **Godot 4** and other engines.
 
-## Como usar os Estúdios no fluxo diário
+## Daily Studio Workflow
 
-1. Abra **Estúdios** na barra lateral esquerda (ou pelo atalho na barra superior de **Assets** via **Abrir Estúdios →**).
-2. Escolha a ferramenta pela categoria desejada.
-3. Ajuste os parâmetros com preview em tempo real.
-4. Clique em **Salvar / Exportar para o Projeto** — o arquivo é gravado diretamente no repositório (`.tres`, `.tscn`, `.gd`, `.gdshader`, `.json`, `.png` ou `.wav`) e, quando suportado, pode ser ligado à cena principal pelo botão **Usar na cena principal**.
+1. Open **Studios** from the left sidebar (or via **Open Studios →** in the Asset Catalog).
+2. Pick a studio by discipline.
+3. Tune parameters with live preview.
+4. Click **Save / Export to Project** — outputs are written straight to disk (`.tres`, `.tscn`, `.gd`, `.gdshader`, `.json`, `.png`, or `.wav`) and supported 2D studios offer **"Use in main scene"** to wire them automatically.
 
-## Blocos de Ferramentas
+## Tool Blocks
 
-### Bloco A — Arte 2D, Sprites & Animação
-- **Estúdio de Animação de Sprites**: recorta spritesheets por grid ou frames, valida FPS e exporta `SpriteFrames` (`.tres`) para `AnimatedSprite2D`.
-- **Estúdio de Autotile & Tilemap Collision**: configura máscaras de colisão e terrenos 2D para `TileSet` no Godot 4.
-- **Estúdio de Esqueleto 2D (`Skeleton2D`)**: monta hierarquia de ossos e poses base para personagens 2D articulados.
-- **Partículas 2D & Shader VFX 2D**: gera presets de `CPUParticles2D`/`GPUParticles2D` e shaders `.gdshader` (flash de dano, outline, água, brilho, dissolve).
-- **Empacotador PBR / PoT (ORM)** e **Visualizador 3D Interativo**: valida texturas potência-de-2, empacota canais ORM e inspeciona malhas `.glb`/`.gltf` contra o orçamento 3D.
+### Block A — 2D Art, Sprites & Animation
+- **Sprite Animation Studio**: slice spritesheets by grid or frames, preview FPS, and export `SpriteFrames` (`.tres`) for `AnimatedSprite2D`.
+- **Autotile & Tilemap Collision Studio**: author 2D collision shapes and terrain masks for Godot 4 `TileSet`.
+- **Skeleton2D Studio**: build bone hierarchies and base poses for articulated 2D characters.
+- **2D Particles & Shader VFX 2D**: generate `CPUParticles2D`/`GPUParticles2D` presets and `.gdshader` effects (hit flash, outline, water, glow, dissolve).
+- **PBR / PoT Packer (ORM)** & **Interactive 3D Viewer**: validate power-of-two textures, pack ORM channels, and inspect `.glb`/`.gltf` meshes against 3D budgets.
 
-### Bloco B — Áudio, SFX & Música
-- **Sintetizador SFX**: sintetizador procedural em WebAudio com exportação direta para `.wav`.
-- **Chiptune Tracker**: sequenciador retrô multi-canal para trilhas curtas e jingles.
-- **Sound Bank & Audio Bus Mixer**: variações aleatórias de pitch/volume e exportação de `default_bus_layout.tres`.
-- **Lip-Sync & Dublagem**: sincronização de fonemas/visemas com áudio para retratos falantes.
+### Block B — Audio, SFX & Music
+- **SFX Synthesizer**: procedural WebAudio synthesizer exporting directly to `.wav`.
+- **Chiptune Tracker**: multi-channel retro sequencer for loops and jingles.
+- **Sound Bank & Audio Bus Mixer**: randomized pitch/volume variations and `default_bus_layout.tres` export.
+- **Lip-Sync & Dubbing**: align phonemes/visemes with audio for talking portraits.
 
-### Bloco C — Combate, Gameplay & IA
-- **Frame Data & Combate**: janelas de *startup*, *active* e *recovery*.
-- **Hitbox / Hurtbox 2D**: retângulos de ataque e vulnerabilidade por frame de animação.
-- **Árvore de Habilidades (`Skill Tree`)**: editor visual de nós de progressão e pré-requisitos.
-- **Loot Table & Drops**: curvas de probabilidade, raridade e simulação de Monte Carlo.
-- **State Machine & Behavior Tree**: máquinas de estado finito e árvores de comportamento para inimigos.
-- **Itens & Inventário em Grid**: catálogo de itens, raridades e regras de inventário.
+### Block C — Combat, Gameplay & AI
+- **Combat Frame Data**: edit *startup*, *active*, and *recovery* windows.
+- **2D Hitbox / Hurtbox**: position attack and vulnerability boxes per animation frame.
+- **Skill Tree Designer**: visual progression graph with prerequisites.
+- **Loot Table & Drops**: probability curves, rarities, and Monte Carlo simulation.
+- **State Machine & Behavior Tree**: FSMs and behavior trees for enemies and bosses.
+- **Items & Grid Inventory**: item catalog, rarities, and grid inventory rules.
 
-### Bloco D — Narrativa, Missões & Cinemáticas
-- **Editor de Árvore de Diálogos**: ramificações, condições, variáveis e exportação JSON/GDScript.
-- **Missões & Quests**: objetivos encadeados, recompensas e gatilhos narrativos.
-- **Sequenciador Cinemático**: linha do tempo de câmera, falas e eventos de cutscene.
+### Block D — Narrative, Quests & Cinematics
+- **Dialogue Tree Editor**: branching conversations, conditions, variables, and JSON/GDScript export.
+- **Quests & Missions**: chained objectives, rewards, and narrative triggers.
+- **Cinematic Sequencer**: timeline for camera moves, dialogue, and cutscene events.
 
-### Bloco E — Interface, HUD & Controles
-- **Estúdio de HUD**: posicionamento de barras de vida, mana, minimapa e âncoras responsivas para `Control` / `CanvasLayer`.
-- **Input Map**: mapeamento de ações de teclado e gamepad direto no `project.godot`.
-- **Controles Virtuais (Touch)**: overlay de joystick e botões para mobile.
-- **Menu de Configurações & Conquistas**: templates prontos de opções de áudio/vídeo e conquistas.
+### Block E — UI, HUD & Controls
+- **HUD Layout Studio**: responsive anchors, health/mana bars, and minimap layouts for Godot `Control` / `CanvasLayer`.
+- **Input Map**: keyboard and gamepad action bindings written to `project.godot`.
+- **Virtual Touch Controls**: mobile joystick and button overlays.
+- **Settings Menu & Achievements**: ready-to-use options and achievement templates.
 
-### Bloco F — Mundo, Câmera & Polimento
-- **Gerador de Dungeons**: geração procedural de salas/corredores com exportação de layout.
-- **Estúdio de Parallax 2D**: camadas de profundidade com fatores de scroll e preview animado.
-- **Zonas de Câmera & Screen Shake**: limites de câmera por sala, *deadzones* e perfis de impacto.
-- **Transições de Cena**: *fade*, *wipe*, *iris* e shaders de transição.
+### Block F — World, Camera & Polish
+- **Dungeon Generator**: procedural room/corridor layouts.
+- **2D Parallax Studio**: depth layers with `scroll_scale`, autoscroll, and live preview.
+- **Camera Zones & Screen Shake**: room camera bounds, deadzones, and impact shake profiles.
+- **Scene Transitions**: *fade*, *wipe*, *iris*, and transition shaders.
 
-### Bloco G — Diagnóstico, Build & Empacotamento
-- **Godot Project Linter & Live Link**: audita referências quebradas e acompanha logs do jogo em tempo real.
-- **VRAM Profiler & Time-Travel Debugger**: estima consumo de memória de vídeo e inspeciona snapshots.
-- **Save Game Hub & Launch Readiness**: checklist de lançamento, empacotamento Steam e exportação de bundle.
+### Block G — Diagnostics, Build & Packaging
+- **Godot Project Linter & Live Link**: audit broken references and inspect live game logs.
+- **VRAM Profiler & Time-Travel Debugger**: estimate video memory usage and inspect state snapshots.
+- **Save Game Hub & Launch Readiness**: release checklists, Steam packaging, and project bundle exports.
 
-### Bloco H — Ferramentas Externas & Ecossistema Kenney
-- Integrações diretas com **Kenney Shape (2D → 3D)**, **Avatar Mixer**, **Creature Mixer**, **Ship Mixer**, **Aseprite**, **Blender** e **Godot Editor**, configuráveis em **Configurações → Ferramentas**.
+### Block H — External Tools & Kenney Ecosystem
+- Direct launchers for **Kenney Shape (2D → 3D)**, **Avatar Mixer**, **Creature Mixer**, **Ship Mixer**, **Aseprite**, **Blender**, and **Godot Editor**.

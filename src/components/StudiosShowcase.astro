@@ -1,0 +1,72 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  lang?: 'en' | 'pt';
+}
+
+const { lang = 'en' } = Astro.props;
+const screenshotPublicPath = '/screenshots/studios-workbench.png';
+const screenshotDiskPath = path.join(process.cwd(), 'public', 'screenshots', 'studios-workbench.png');
+const hasScreenshot = fs.existsSync(screenshotDiskPath);
+
+const copy =
+  lang === 'pt'
+    ? {
+        windowTitle: 'HephaestusForge v0.3.0 — Oficina de Estúdios (36 ferramentas integradas)',
+        placeholderTitle: 'Espaço reservado para o print real da Oficina de Estúdios',
+        placeholderBody:
+          'Salve sua captura em public/screenshots/studios-workbench.png para exibi-la automaticamente aqui.',
+        blocks: [
+          { title: 'Arte 2D & Shaders', desc: 'Sprites, Tilemap Collision, Skeleton2D, Partículas e Shader VFX' },
+          { title: 'Áudio & SFX', desc: 'Sintetizador WebAudio (.wav), Chiptune Tracker e Audio Bus Mixer' },
+          { title: 'Combate & Gameplay', desc: 'Frame Data, Hitbox/Hurtbox, Skill Tree, Loot Table e FSM/BT' },
+          { title: 'Mundo & HUD', desc: 'HUD responsivo, Dungeons, Parallax 2D, Zonas de Câmera e Diálogos' },
+        ],
+      }
+    : {
+        windowTitle: 'HephaestusForge v0.3.0 — Studios Workbench (36 built-in tools)',
+        placeholderTitle: 'Real Studios Workbench screenshot slot',
+        placeholderBody:
+          'Drop your screenshot at public/screenshots/studios-workbench.png to render it automatically here.',
+        blocks: [
+          { title: '2D Art & Shaders', desc: 'Sprites, Tilemap Collision, Skeleton2D, Particles & Shader VFX' },
+          { title: 'Audio & SFX', desc: 'WebAudio Synthesizer (.wav), Chiptune Tracker & Audio Bus Mixer' },
+          { title: 'Combat & Gameplay', desc: 'Frame Data, Hitbox/Hurtbox, Skill Tree, Loot Table & FSM/BT' },
+          { title: 'World & HUD', desc: 'Responsive HUD, Dungeons, 2D Parallax, Camera Zones & Dialogues' },
+        ],
+      };
+---
+
+<div class="forge-showcase">
+  <div class="forge-showcase__bar">
+    <div class="forge-showcase__dots" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <span>{copy.windowTitle}</span>
+    <span>Godot 4 • File-over-App</span>
+  </div>
+
+  <div class="forge-showcase__frame">
+    {hasScreenshot ? (
+      <img src={screenshotPublicPath} alt={copy.windowTitle} loading="eager" />
+    ) : (
+      <div class="forge-showcase__placeholder">
+        <strong>{copy.placeholderTitle}</strong>
+        <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--sl-color-gray-3);">
+          {copy.placeholderBody}
+        </p>
+      </div>
+    )}
+  </div>
+
+  <div class="forge-showcase__grid">
+    {copy.blocks.map((block) => (
+      <div class="forge-showcase__pill">
+        <strong>{block.title}</strong>
+        <span>{block.desc}</span>
+      </div>
+    ))}
+  </div>
+</div>

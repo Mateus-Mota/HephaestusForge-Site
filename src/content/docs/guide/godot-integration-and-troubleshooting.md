@@ -1,51 +1,51 @@
 ---
-title: Integração com Godot 4 & Solução de Problemas
-description: Como configurar o executável Godot 4, estrutura dos projetos gerados e resolução rápida de problemas comuns no Windows.
+title: Godot 4 Integration & Troubleshooting
+description: How to configure your Godot 4 executable, understand the generated project layout, and solve common Windows issues.
 ---
 
-Este guia explica como conectar seu executável do **Godot 4** ao **HephaestusForge**, como funciona a cena principal jogável dos projetos criados no Ritual e como resolver os problemas mais comuns no Windows.
+This guide explains how to connect your **Godot 4** executable to **HephaestusForge**, how generated projects are structured, and how to fix common Windows issues.
 
-## 1. Configurando o Godot 4 no HephaestusForge
+## 1. Configuring Godot 4 in HephaestusForge
 
-1. Baixe o **Godot 4.x** (Standard ou .NET) em [godotengine.org](https://godotengine.org/).
-2. No HephaestusForge, abra **Configurações** (engrenagem no canto inferior esquerdo) → aba **Ferramentas**.
-3. No campo **Caminho do Executável Godot**, selecione o arquivo `Godot_v4.x_win64.exe` (preferencialmente a versão normal ou `_console.exe` para capturar logs detalhados).
-4. Clique em **Salvar**. A partir desse momento:
-   - **Play (`F5`)** na barra superior ou dentro de qualquer tarefa do Kanban executa o jogo diretamente.
-   - **Abrir no Editor** abre o projeto completo no editor do Godot 4.
+1. Download **Godot 4.x** (Standard or .NET) from [godotengine.org](https://godotengine.org/).
+2. Open **Settings** (bottom-left gear icon) → **Tools** tab.
+3. Under **Godot Executable Path**, select `Godot_v4.x_win64.exe` (or `_console.exe` if you want verbose console logs).
+4. Click **Save**. Now:
+   - **Play (`F5`)** in the top bar or inside any Kanban task runs the game immediately.
+   - **Open in Editor** opens the full project in the Godot 4 editor.
 
-## 2. Estrutura do Projeto Gerado & Cena Principal
+## 2. Generated Project Structure & Main Scene
 
-Ao criar um jogo pelo **Ritual de Criação** ou pelo **Project Forge Wizard**, o HephaestusForge gera uma estrutura pronta para rodar:
+Projects created through the **Creation Ritual** or **Project Forge Wizard** follow a clean, ready-to-run layout:
 
 ```text
-meu-jogo/
-├── project.godot                # Configuração da engine, resolução e Input Map
+my-game/
+├── project.godot                # Engine config, viewport & Input Map
 ├── scenes/
-│   └── main.tscn                # Cena principal jogável
-├── scripts/                     # Scripts GDScript (.gd)
-├── assets/                      # Sprites, áudio, fontes e modelos 3D
+│   └── main.tscn                # Playable main scene
+├── scripts/                     # GDScript files (.gd)
+├── assets/                      # Sprites, audio, fonts & 3D meshes
 ├── docs/
-│   ├── gdd/                     # Documentos do Game Design (Markdown + Wikilinks)
-│   └── coordination/            # Tarefas do Kanban (.json) e ADRs (.md)
+│   ├── gdd/                     # Game Design Docs (Markdown + WikiLinks)
+│   └── coordination/            # Kanban tasks (.json) & ADRs (.md)
 └── .forge/
-    ├── config.json              # Metadados do projeto
-    ├── asset_spec.json          # Orçamento técnico de assets
-    └── starter_assets.json      # Manifesto do Starter Pack aplicado (quando usado)
+    ├── config.json              # Project metadata
+    ├── asset_spec.json          # Technical asset budgets
+    └── starter_assets.json      # Applied Starter Pack manifest
 ```
 
-## 3. Solução de Problemas Comuns (Windows)
+## 3. Common Windows Troubleshooting
 
-### "Botão Play (F5) não abre o jogo"
-- Verifique em **Configurações → Ferramentas** se o caminho do Godot 4 aponta para o `.exe` válido (e não para a pasta).
-- Confirme que existe um arquivo `project.godot` na raiz do workspace ativo.
+### "Play (F5) does not launch the game"
+- Confirm under **Settings → Tools** that the Godot path points to the `.exe` binary (not the folder).
+- Make sure `project.godot` exists at the root of the active workspace.
 
-### "Os assets do Starter Pack não apareceram ao criar um projeto"
-- O Starter Pack lê pacotes `.zip` da sua pasta local de biblioteca configurada em **Configurações → Biblioteca de Assets**.
-- Veja o passo a passo completo em [Biblioteca Local de Assets & Starter Packs](/guide/assets-and-starter-packs/).
+### "Starter Pack assets did not appear in my new project"
+- Starter Packs read `.zip` archives from your local library folder configured in **Settings → Asset Library**.
+- Follow [Local Assets & Starter Packs](/guide/assets-and-starter-packs/) for the exact folder layout.
 
-### "Arrastar cards no Kanban não responde"
-- A partir da `v0.3.0`, o Kanban usa arraste nativo por *pointer events* compatível com Windows WebView2. Clique e segure no corpo do card (fora dos botões de ação) e arraste sobre a coluna de destino.
+### "Dragging Kanban cards does not respond"
+- Starting in `v0.3.0`, Kanban uses native pointer-event dragging built specifically for Windows WebView2. Click and hold on the card body (outside action buttons) and drag over the target column.
 
-### "Quero restaurar os módulos padrão da barra lateral"
-- Clique em **Mais (`⋯`)** na barra lateral esquerda e use **Restaurar barra padrão** para voltar aos 4 módulos iniciais (`GDD`, `Kanban`, `Mapa` e `Estúdios`).
+### "How do I restore the default sidebar modules?"
+- Click **More (`⋯`)** at the bottom-left and choose **Restore default bar** to reset to `GDD`, `Kanban`, `Project Map`, and `Studios`.

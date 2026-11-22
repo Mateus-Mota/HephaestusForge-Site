@@ -1,43 +1,60 @@
 ---
 title: HephaestusForge
-description: Estação de trabalho desktop file-over-app para conceber, organizar e produzir jogos independentes com Godot 4 e ferramentas externas.
+description: File-over-app desktop workbench for indie game development — live GDD, Kanban, Knowledge Graph, 36 built-in studios, and direct Godot 4 integration.
 template: splash
 hero:
-  tagline: O Segundo Cérebro Desktop (File-over-App) para Game Dev — GDD vivo, Kanban, Grafo de Conhecimento, 36 Estúdios internos e integração direta com Godot 4.
+  tagline: Your file-over-app desktop workbench for game development — live GDD, Kanban, Knowledge Graph, 36 built-in studios, and one-click Godot 4 Play (F5).
   actions:
-    - text: Baixar v0.3.0 (Windows)
-      link: /downloads/
+    - text: Download v0.3.0 (Windows)
+      link: '#download'
       icon: right-arrow
       variant: primary
-    - text: Ler a Wiki
+    - text: Explore the Wiki
       link: /guide/getting-started/
       icon: open-book
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import StudiosShowcase from '../../components/StudiosShowcase.astro';
+import DownloadBanner from '../../components/DownloadBanner.astro';
 
-## Por que o HephaestusForge?
+<div class="forge-badges">
+  <span class="forge-badge forge-badge--accent">v0.3.0 • Windows 10/11 (x64)</span>
+  <span class="forge-badge">Tauri v2 + Rust (~10 MiB)</span>
+  <span class="forge-badge">100% File-over-App</span>
+  <span class="forge-badge">Godot 4 Ready</span>
+</div>
+
+## Inside the Workbench — 36 Built-in Studios
+
+<StudiosShowcase lang="en" />
+
+## What's Inside HephaestusForge
 
 <CardGrid stagger>
   <Card title="100% File-over-App (Zero Lock-in)" icon="document">
-    Todo GDD, tarefa do Kanban, ADR, fluxo narrativo e skill vive em arquivos reais `.md` e `.json` dentro do repositório Git do seu jogo. Sem banco de dados proprietário.
+    Every GDD document, Kanban task, ADR, dialogue flow, and AI skill lives in plain `.md` and `.json` files inside your game's Git repository. No proprietary database.
   </Card>
-  <Card title="Host Desktop Nativo (Tauri v2 + Rust)" icon="rocket">
-    Binário leve (~10 MB), boot instantâneo, escrita atômica com ETag/SHA-256 e zero portas TCP abertas na sua máquina.
+  <Card title="36 Built-in Studios + Godot 4" icon="puzzle">
+    Sprite Animation, 2D Shader VFX, HUD Layout, Tilemap Collision, SFX Synthesizer, Combat Frame Data, Dialogues, Camera Zones, and 2D Parallax — exporting `.tres`, `.tscn`, `.gd`, and `.gdshader` straight to your project.
   </Card>
-  <Card title="36 Estúdios Internos + Godot 4" icon="puzzle">
-    Animação de Sprites, Shaders 2D, HUD, Tilemap Collision, Sintetizador SFX, Combate, Diálogos e Câmera — exportando `.tres`, `.tscn`, `.gd` e `.gdshader` prontos para rodar com `F5`.
+  <Card title="Kanban Linked to Git & Play (F5)" icon="approve-check-circle">
+    Drag-and-drop task lanes backed by flat JSON files (LexoRank), per-task Git branch suggestions, and instant `F5` engine launch right from any task.
   </Card>
-  <Card title="Workspace 100% Customizável" icon="setting">
-    Fixe, desafixe e reordene qualquer módulo da barra lateral, conecte sua própria biblioteca local de Starter Packs Kenney (CC0) e gerencie skills de agentes de IA.
+  <Card title="Asset Catalog & Kenney Starter Packs" icon="open-book">
+    Point to your local CC0 Kenney `.zip` library to bootstrap playable Godot 2D scenes and audit sprites, audio, and 3D meshes against `.forge/asset_spec.json`.
+  </Card>
+  <Card title="Customizable Workspace & AI Skills" icon="setting">
+    Pin, unpin, and reorder every sidebar module, run context-aware AI prompts, and browse the Public Tools Radar without clutter.
+  </Card>
+  <Card title="Native Rust Core (Tauri v2)" icon="rocket">
+    Lightweight ~10 MiB installer, instant startup, atomic ETag/SHA-256 writes, and zero local TCP ports exposed.
   </Card>
 </CardGrid>
 
----
+## Download v0.3.0
 
-## Comece em 3 minutos
+<DownloadBanner lang="en" />
 
-1. **[Baixe o instalador v0.3.0](/downloads/)** (`.exe` NSIS ou `.msi` para Windows 10/11 x64).
-2. Siga o guia **[Primeiros Passos & Ritual de Criação](/guide/getting-started/)** para gerar seu primeiro projeto Godot 4 jogável.
-3. Configure sua **[Biblioteca Local de Starter Packs Kenney](/guide/assets-and-starter-packs/)** e explore o **[Catálogo de Estúdios](/guide/studios-catalog/)**.
+Need installation requirements, older releases, or step-by-step setup? Check the **[Downloads page](/downloads/)**, **[Changelog](/changelog/)**, or start with **[Quick Start & Creation Ritual](/guide/getting-started/)**.

@@ -1,23 +1,23 @@
 ---
 title: Changelog
-description: Histórico de lançamentos e principais melhorias do HephaestusForge.
+description: Release history and key improvements for HephaestusForge.
 ---
 
-## `v0.3.0` (Novembro 2026)
+## `v0.3.0` (November 2026)
 
-### Novidades & UX
-- **Barra lateral 100% customizável**: todos os módulos (incluindo GDD, Kanban, Mapa e Estúdios) podem ser fixados, desafixados e reordenados com badges dinâmicos e botão *Restaurar barra padrão*.
-- **Arraste manual no Kanban para Windows WebView2**: migração do drag-and-drop para *pointer events* nativos com pré-visualização da coluna alvo.
-- **Cena principal jogável ligada aos Starter Packs & Estúdios**: projetos Godot 2D criados no Ritual já nascem com cena jogável e integração direta com os Estúdios 2D.
-- **Radar de Ferramentas Públicas**: renomeado em Skills para refletir catálogos de ferramentas públicas e open source.
-- **Limpeza do Catálogo de Assets**: remoção dos 14 atalhos duplicados de estúdios internos, centralizando o acesso pelo botão *Abrir Estúdios →*.
+### Highlights & UX
+- **Fully customizable sidebar**: every module (including GDD, Kanban, Project Map, and Studios) can be pinned, unpinned, and reordered with live count badges and a *Restore default bar* action.
+- **Native pointer-event Kanban drag-and-drop on Windows WebView2**: smooth manual card dragging across columns with target-lane highlighting.
+- **Playable main scene wired to Starter Packs & 2D Studios**: Godot 2D projects created via the Ritual start with a playable scene and direct *"Use in main scene"* studio hooks.
+- **Public Tools Radar**: renamed in Skills to cover both open-source and public developer tools.
+- **Cleaner Asset Catalog**: removed 14 duplicated internal studio shortcuts from the catalog header in favor of a single *Open Studios →* button.
 
-### Arquitetura & Qualidade
-- **Zero `: any` em produção** (`0 errors, 0 warnings` no linter estático e Design Tokens).
-- **Modularização profunda** dos principais workspaces e estúdios (`PromptWorkspace`, `SkillsWorkspace`, `FlowWorkspace`, `SettingsWorkspace`, `AssetDetailModal`, `ProjectForgeWizardModal`, `TaskDetailModal`, `Navigator`, `CameraZoneStudioModal`, `Parallax2dStudioModal`).
-- **Expansão de cobertura de testes unitários** no frontend e core Rust.
+### Architecture & Quality
+- **Zero `: any` in production code** (`0 errors, 0 warnings` across static lint and design-token checks).
+- **Deep modularization** of core workspaces and studios (`PromptWorkspace`, `SkillsWorkspace`, `FlowWorkspace`, `SettingsWorkspace`, `AssetDetailModal`, `ProjectForgeWizardModal`, `TaskDetailModal`, `Navigator`, `CameraZoneStudioModal`, `Parallax2dStudioModal`).
+- **Expanded unit test coverage** across frontend utilities and core Rust modules.
 
 ---
 
 ## `v0.2.5`
-- Primeira release pública do host desktop Tauri v2 Full-Rust com editor GDD CodeMirror 6, Kanban LexoRank, Grafo de Conhecimento Cytoscape, Catálogo de Assets e Estúdios 2D/3D.
+- Initial desktop release of the Tauri v2 Full-Rust host with CodeMirror 6 GDD editor, LexoRank Kanban, Cytoscape Knowledge Graph, Asset Catalog, and 2D/3D Studios.

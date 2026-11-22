@@ -1,37 +1,37 @@
 ---
-title: Workspace, Barra Lateral Customizável & Ferramentas da Forja
-description: Como personalizar 100% a barra lateral, usar GDD, Kanban, Mapa, Fluxos, Prompts, Skills e atalhos de teclado.
+title: Workspace, Customizable Sidebar & Core Modules
+description: How to customize your sidebar 100%, use GDD, Kanban, Project Map, Dialogue Flows, Prompts, Skills, and keyboard shortcuts.
 ---
 
-O **HephaestusForge** segue o princípio **File-over-App**: tudo o que você cria (GDDs, tarefas do Kanban, fluxos narrativos, ADRs, skills e assets) vive em arquivos reais legíveis dentro do repositório do seu jogo.
+**HephaestusForge** follows the **File-over-App** principle: everything you author (GDDs, Kanban tasks, narrative flows, ADRs, skills, and assets) lives in plain, human-readable files inside your game's repository.
 
-## 1. Barra Lateral 100% Customizável
+## 1. 100% Customizable Sidebar
 
-Por padrão, a barra lateral esquerda abre com os 4 módulos mais usados no dia a dia: **GDD**, **Kanban**, **Mapa** e **Estúdios**.
+By default, the left sidebar starts with 4 core modules pinned: **GDD**, **Kanban**, **Project Map**, and **Studios**.
 
-Porém, **nenhum módulo é obrigatório**:
-1. Clique em **Mais (`⋯`)** no canto inferior esquerdo.
-2. Use o ícone de **alfinete** para **fixar ou desafixar qualquer módulo** (inclusive *GDD*, *Kanban*, *Mapa* e *Estúdios*).
-3. Quando houver 2 ou mais módulos fixados, use as setas **`↑` / `↓`** para escolher a ordem exata da sua barra lateral.
-4. Módulos fixados exibem **badges dinâmicos** com contagens ao vivo (tarefas ativas, assets, ADRs, skills ativas, fluxos e entidades).
-5. Se quiser voltar ao layout original, clique em **Restaurar barra padrão** no rodapé do menu *Mais*.
+However, **no module is locked**:
+1. Click **More (`⋯`)** at the bottom-left of the sidebar.
+2. Use the **pin icon** to **pin or unpin any module** (including *GDD*, *Kanban*, *Map*, and *Studios*).
+3. When 2 or more modules are pinned, use **`↑` / `↓`** to arrange them in your exact daily order.
+4. Pinned modules display **live count badges** (active tasks, assets, ADRs, active skills, flows, and world entities).
+5. Click **Restore default bar** at the bottom of the *More* menu anytime to reset to the default 4 modules.
 
-## 2. Módulos Principais do Dia a Dia
+## 2. Core Daily Modules
 
-| Módulo | Para que serve | Dica rápida |
+| Module | Purpose | Quick Tip |
 |---|---|---|
-| **GDD** | Documentação viva do jogo em Markdown com CodeMirror 6 e `[[WikiLinks]]`. | `Ctrl+S` salva atomicamente; `Alt+←` / `Alt+→` navega no histórico. |
-| **Kanban** | Gestão de tarefas em 5 raias (*Backlog, Em Andamento, Em Revisão, Bloqueado, Concluído*). | Arraste cards manualmente entre colunas ou use `Alt+←` / `Alt+→` no card focado. |
-| **Mapa do Projeto** | Visão macro ligando tarefas, GDDs, ADRs e esteira de produção. | Alterne entre modo **Mapa** e **Quadro** no topo. |
-| **Estúdios (a Oficina)** | 36 bancadas internas (Sprites, Shaders, HUD, Tilemap, Combate, Áudio, Loot) + **Geradores & externos** (Kenney). | Use `Ctrl+K` para abrir qualquer estúdio direto pelo teclado. |
-| **Diálogos & Quests (Flow)** | Editor visual de árvores de diálogo, quests e FSM com simulador interativo e exportação Godot/Yarn/Dialogic. | Clique em **Simular Fluxo** para testar variáveis e ramificações antes de exportar. |
-| **Prompt Studio** | Templates de IA que injetam contexto vivo (GDD, tarefas, ADRs, papéis e skills). | Use **Foco** para recolher a barra lateral e **Editar** para ajustes rápidos. |
-| **Skills de IA** | Gestão de `.agents/skills/`, papéis em `.agents/roles/`, Hub Público e **Radar de Ferramentas Públicas**. | Ative ou desative skills por fase do projeto sem apagar arquivos. |
-| **Decisões (ADRs)** | Registro formal de decisões arquiteturais do projeto. | Clique em **Analisar com IA** para revisar trade-offs no Prompt Studio. |
+| **GDD** | Living game design docs in Markdown with CodeMirror 6 and `[[WikiLinks]]`. | `Ctrl+S` saves atomically; `Alt+←` / `Alt+→` navigates history. |
+| **Kanban** | 5-lane task board (*Backlog, Active, Review, Blocked, Done*). | Drag cards across lanes manually or use `Alt+←` / `Alt+→` on a focused card. |
+| **Project Map** | High-level view connecting tasks, GDDs, ADRs, and production pipeline. | Switch between **Map** and **Board** views at the top. |
+| **Studios** | 36 built-in authoring studios + **External Generators** (Kenney). | Press `Ctrl+K` to jump straight to any studio. |
+| **Flows (Dialogues & Quests)** | Visual node editor for dialogues, quests, and FSMs with live simulator & Godot/Yarn/Dialogic export. | Use **Simulate Flow** to test branches and variables before exporting. |
+| **Prompt Studio** | AI prompt templates that inject live project context (GDD, tasks, ADRs, roles, skills). | Toggle **Focus** mode to collapse the sidebar while reviewing prompts. |
+| **AI Skills** | Manage `.agents/skills/`, `.agents/roles/`, Public Hub, and **Public Tools Radar**. | Enable or disable skills per milestone without deleting files. |
+| **Decisions (ADRs)** | Formal Architecture Decision Records for your game. | Click **Analyze with AI** to review trade-offs in Prompt Studio. |
 
-## 3. Atalhos Essenciais
+## 3. Essential Shortcuts
 
-- **`Ctrl+K`**: Paleta de Comandos (abre módulos, documentos, tarefas, estúdios e geradores Kenney).
-- **`F5`**: Executa o projeto na engine configurada (ex.: Godot).
-- **`Ctrl+,`**: Abre as Configurações do Projeto & Estação de Trabalho.
-- **`?`** (botão de ajuda no topo): Abre a ajuda contextual da tela atual.
+- **`Ctrl+K`**: Command Palette (jump to modules, docs, tasks, studios, and Kenney tools).
+- **`F5`**: Run your game in the configured engine (e.g., Godot 4).
+- **`Ctrl+,`**: Open Project & Workbench Settings.
+- **`?`** (top-bar help button): Open contextual in-app help for the active screen.
