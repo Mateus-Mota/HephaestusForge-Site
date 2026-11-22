@@ -16,6 +16,10 @@ However, **no module is locked**:
 4. Pinned modules display **live count badges** (active tasks, assets, ADRs, active skills, flows, and world entities).
 5. Click **Restore default bar** at the bottom of the *More* menu anytime to reset to the default 4 modules.
 
+:::tip[Keep a minimalist sidebar]
+Pin only the 3–5 modules you touch every day and use **`Ctrl+K`** (Command Palette) to jump instantaneously to any other module, document, task, or studio.
+:::
+
 ## 2. Core Daily Modules
 
 | Module | Purpose | Quick Tip |
@@ -23,7 +27,7 @@ However, **no module is locked**:
 | **GDD** | Living game design docs in Markdown with CodeMirror 6 and `[[WikiLinks]]`. | `Ctrl+S` saves atomically; `Alt+←` / `Alt+→` navigates history. |
 | **Kanban** | 5-lane task board (*Backlog, Active, Review, Blocked, Done*). | Drag cards across lanes manually or use `Alt+←` / `Alt+→` on a focused card. |
 | **Project Map** | High-level view connecting tasks, GDDs, ADRs, and production pipeline. | Switch between **Map** and **Board** views at the top. |
-| **Studios** | 36 built-in authoring studios + **External Generators** (Kenney). | Press `Ctrl+K` to jump straight to any studio. |
+| **Studios** | 37 built-in authoring studios + **External Generators** (Kenney). | Press `Ctrl+K` to jump straight to any studio. |
 | **Flows (Dialogues & Quests)** | Visual node editor for dialogues, quests, and FSMs with live simulator & Godot/Yarn/Dialogic export. | Use **Simulate Flow** to test branches and variables before exporting. |
 | **Prompt Studio** | AI prompt templates that inject live project context (GDD, tasks, ADRs, roles, skills). | Toggle **Focus** mode to collapse the sidebar while reviewing prompts. |
 | **AI Skills** | Manage `.agents/skills/`, `.agents/roles/`, Public Hub, and **Public Tools Radar**. | Enable or disable skills per milestone without deleting files. |
@@ -35,3 +39,5 @@ However, **no module is locked**:
 - **`F5`**: Run your game in the configured engine (e.g., Godot 4).
 - **`Ctrl+,`**: Open Project & Workbench Settings.
 - **`?`** (top-bar help button): Open contextual in-app help for the active screen.
+
+See the full list on **[Keyboard Shortcuts](/guide/shortcuts/)**.

@@ -1,9 +1,9 @@
 ---
 title: HephaestusForge
-description: File-over-app desktop workbench for indie game development — live GDD, Kanban, Knowledge Graph, 36 built-in studios, and direct Godot 4 integration.
+description: File-over-app desktop workbench for indie game development — live GDD, Kanban, Knowledge Graph, 37 built-in studios, and direct Godot 4 integration.
 template: splash
 hero:
-  tagline: Your file-over-app desktop workbench for game development — live GDD, Kanban, Knowledge Graph, 36 built-in studios, and one-click Godot 4 Play (F5).
+  tagline: Your file-over-app desktop workbench for game development — live GDD, Kanban, Knowledge Graph, 37 built-in studios, and one-click Godot 4 Play (F5).
   actions:
     - text: Download v0.3.0 (Windows)
       link: '#download'
@@ -17,6 +17,7 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import StudiosShowcase from '../../components/StudiosShowcase.astro';
+import WorkflowSteps from '../../components/WorkflowSteps.astro';
 import DownloadBanner from '../../components/DownloadBanner.astro';
 
 <div class="forge-badges">
@@ -36,7 +37,7 @@ import DownloadBanner from '../../components/DownloadBanner.astro';
   <Card title="100% File-over-App (Zero Lock-in)" icon="document">
     Every GDD document, Kanban task, ADR, dialogue flow, and AI skill lives in plain `.md` and `.json` files inside your game's Git repository. No proprietary database.
   </Card>
-  <Card title="36 Built-in Studios + Godot 4" icon="puzzle">
+  <Card title="37 Built-in Studios + Godot 4" icon="puzzle">
     Sprite Animation, 2D Shader VFX, HUD Layout, Tilemap Collision, SFX Synthesizer, Combat Frame Data, Dialogues, Camera Zones, and 2D Parallax — exporting `.tres`, `.tscn`, `.gd`, and `.gdshader` straight to your project.
   </Card>
   <Card title="Kanban Linked to Git & Play (F5)" icon="approve-check-circle">
@@ -53,8 +54,12 @@ import DownloadBanner from '../../components/DownloadBanner.astro';
   </Card>
 </CardGrid>
 
+## From Zero to Playable (F5) in 3 Steps
+
+<WorkflowSteps lang="en" />
+
 ## Download v0.3.0
 
 <DownloadBanner lang="en" />
 
-Need installation requirements, older releases, or step-by-step setup? Check the **[Downloads page](/downloads/)**, **[Changelog](/changelog/)**, or start with **[Quick Start & Creation Ritual](/guide/getting-started/)**.
+Need installation requirements, keyboard shortcuts, or answers to common questions? Check **[Downloads](/downloads/)**, **[Keyboard Shortcuts](/guide/shortcuts/)**, **[FAQ](/guide/faq/)**, **[Changelog](/changelog/)**, or start with **[Quick Start & Creation Ritual](/guide/getting-started/)**.

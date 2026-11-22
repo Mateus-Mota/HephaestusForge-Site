@@ -23,13 +23,20 @@ Este guia cobre o caminho mais curto entre abrir o **HephaestusForge** pela prim
    - Manifesto de assets iniciais (`.forge/starter_assets.json`).
    - **Cena Principal jogável** (em projetos Godot 2D com Starter Pack), já com chão visível, sala dimensionada e plataforma alcançável.
 
+:::tip[Zero lock-in]
+Tudo que o Ritual cria é Markdown puro, JSON e arquivos padrão do Godot 4 (`.tscn`, `.gd`, `.tres`). Você pode abrir seu projeto no Godot ou em qualquer cliente Git a qualquer momento sem depender do HephaestusForge aberto.
+:::
+
 ## 3. Rodando o Jogo (`Play / F5`) e Usando os Estúdios
 
 - Clique em **Play (`F5`)** na barra superior para abrir ou executar o projeto diretamente na **Godot**.
 - Abra **Estúdios** (a Oficina) para criar animações de sprite, shaders 2D, HUD ou colisões de tilemap.
 - Ao exportar um artefato de um estúdio 2D (*Sprite Animation*, *Shader VFX 2D*, *HUD* ou *Tilemap*), clique em **"Usar na cena principal"** para conectar o arquivo gerado diretamente aos slots da cena principal em `.forge/starter_assets.json`.
 
+:::note[Primeira vez configurando o Godot 4?]
+Se `Play (F5)` não abrir automaticamente, aponte o HephaestusForge para o seu executável `Godot_v4.x_win64.exe` em **Configurações → Ferramentas** — veja [Integração com Godot 4 & Solução de Problemas](/pt/guide/godot-integration-and-troubleshooting/).
+:::
+
 ## 4. Tour do Aprendiz (*Forja Viva*)
 
 Se quiser conhecer a interface sem risco de mexer no seu projeto real, abra a demo **`ForgePong`** no Menu Principal e inicie o **Tour do Aprendiz**. Você pode avançar, usar o botão **Voltar** em qualquer parada ou pular o tour quando quiser.
-

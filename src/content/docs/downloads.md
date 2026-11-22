@@ -12,10 +12,18 @@ description: Download the official HephaestusForge installers for Windows (NSIS 
 
 Browse all public releases on [GitHub Releases](https://github.com/Mateus-Mota/HephaestusForge-Site/releases).
 
+:::note[Windows SmartScreen notice]
+Because early indie releases are not yet signed with an EV code-signing certificate, Windows SmartScreen may show *"Windows protected your PC"* on first launch. Click **More info → Run anyway** if you downloaded the installer directly from this official page or GitHub Releases.
+:::
+
 ## System Requirements
 - **Windows 10 or Windows 11 (64-bit)**
 - **Microsoft Edge WebView2 Runtime** (pre-installed on Windows 11)
 - **Godot 4.x** *(optional — required only for launching `Play F5` directly from the Forge)*
+
+:::tip[Quick URL]
+You can always share the short link `/download` to redirect straight to the latest Windows `.exe` installer.
+:::
 
 ## Next Step
 After installing, follow **[Quick Start & Creation Ritual](/guide/getting-started/)**.

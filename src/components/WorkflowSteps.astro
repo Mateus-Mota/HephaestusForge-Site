@@ -1,0 +1,54 @@
+---
+interface Props {
+  lang?: 'en' | 'pt';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const steps =
+  lang === 'pt'
+    ? [
+        {
+          num: '01',
+          title: 'Ritual de Criação + Starter Pack',
+          desc: 'Crie um projeto Godot 4 em segundos com GDD vivo, Kanban, ADRs e cena principal já jogável a partir dos seus kits CC0 do Kenney.',
+        },
+        {
+          num: '02',
+          title: 'Produza nos 37 Estúdios & Kanban',
+          desc: 'Gere animações de sprite, shaders 2D, HUD, tilemaps, áudio e diálogos gravando .tres, .tscn, .gd e .gdshader direto no Git.',
+        },
+        {
+          num: '03',
+          title: 'Teste com Play (F5) sem trocar de janela',
+          desc: 'Ligue os outputs 2D com "Usar na cena principal" e execute seu jogo no Godot 4 com F5 direto da barra superior ou de qualquer tarefa.',
+        },
+      ]
+    : [
+        {
+          num: '01',
+          title: 'Creation Ritual + Starter Pack',
+          desc: 'Bootstrap a Godot 4 project in seconds with live GDD, Kanban, ADRs, and a playable main scene wired to your local CC0 Kenney kits.',
+        },
+        {
+          num: '02',
+          title: 'Author in 37 Studios & Kanban',
+          desc: 'Build sprite animations, 2D shaders, HUDs, tilemaps, SFX, and dialogues exporting .tres, .tscn, .gd, and .gdshader straight to Git.',
+        },
+        {
+          num: '03',
+          title: 'Launch with Play (F5) in One Click',
+          desc: 'Wire 2D studio outputs via "Use in main scene" and run your game in Godot 4 with F5 from the top bar or any Kanban task.',
+        },
+      ];
+---
+
+<div class="forge-steps">
+  {steps.map((step) => (
+    <div class="forge-steps__card">
+      <span class="forge-steps__num">{step.num}</span>
+      <strong>{step.title}</strong>
+      <p>{step.desc}</p>
+    </div>
+  ))}
+</div>

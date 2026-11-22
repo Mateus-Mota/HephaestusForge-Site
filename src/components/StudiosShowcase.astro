@@ -10,6 +10,7 @@ const { lang = 'en' } = Astro.props;
 const screenshotPublicPath = '/screenshots/studios-workbench.png';
 const screenshotDiskPath = path.join(process.cwd(), 'public', 'screenshots', 'studios-workbench.png');
 const hasScreenshot = fs.existsSync(screenshotDiskPath);
+const catalogBase = lang === 'pt' ? '/pt/guide/studios-catalog/' : '/guide/studios-catalog/';
 
 const copy =
   lang === 'pt'
@@ -19,10 +20,26 @@ const copy =
         placeholderBody:
           'Salve sua captura em public/screenshots/studios-workbench.png para exibi-la automaticamente aqui.',
         blocks: [
-          { title: 'Arte 2D & Shaders', desc: 'Sprites, Tilemap Collision, Skeleton2D, Partículas e Shader VFX' },
-          { title: 'Áudio & SFX', desc: 'Sintetizador WebAudio (.wav), Chiptune Tracker e Audio Bus Mixer' },
-          { title: 'Combate & Gameplay', desc: 'Frame Data, Hitbox/Hurtbox, Skill Tree, Loot Table e FSM/BT' },
-          { title: 'Mundo & HUD', desc: 'HUD responsivo, Dungeons, Parallax 2D, Zonas de Câmera e Diálogos' },
+          {
+            title: 'Arte 2D & Shaders',
+            desc: 'Sprites, Tilemap Collision, Skeleton2D, Partículas e Shader VFX',
+            href: `${catalogBase}#bloco-a--arte-2d-sprites--animação`,
+          },
+          {
+            title: 'Áudio & SFX',
+            desc: 'Sintetizador WebAudio (.wav), Chiptune Tracker e Audio Bus Mixer',
+            href: `${catalogBase}#bloco-b--áudio-sfx--música`,
+          },
+          {
+            title: 'Combate & Gameplay',
+            desc: 'Frame Data, Hitbox/Hurtbox, Skill Tree, Loot Table e FSM/BT',
+            href: `${catalogBase}#bloco-c--combate-gameplay--ia`,
+          },
+          {
+            title: 'Mundo & HUD',
+            desc: 'HUD responsivo, Dungeons, Parallax 2D, Zonas de Câmera e Diálogos',
+            href: `${catalogBase}#bloco-e--interface-hud--controles`,
+          },
         ],
       }
     : {
@@ -31,10 +48,26 @@ const copy =
         placeholderBody:
           'Drop your screenshot at public/screenshots/studios-workbench.png to render it automatically here.',
         blocks: [
-          { title: '2D Art & Shaders', desc: 'Sprites, Tilemap Collision, Skeleton2D, Particles & Shader VFX' },
-          { title: 'Audio & SFX', desc: 'WebAudio Synthesizer (.wav), Chiptune Tracker & Audio Bus Mixer' },
-          { title: 'Combat & Gameplay', desc: 'Frame Data, Hitbox/Hurtbox, Skill Tree, Loot Table & FSM/BT' },
-          { title: 'World & HUD', desc: 'Responsive HUD, Dungeons, 2D Parallax, Camera Zones & Dialogues' },
+          {
+            title: '2D Art & Shaders',
+            desc: 'Sprites, Tilemap Collision, Skeleton2D, Particles & Shader VFX',
+            href: `${catalogBase}#block-a--2d-art-sprites--animation`,
+          },
+          {
+            title: 'Audio & SFX',
+            desc: 'WebAudio Synthesizer (.wav), Chiptune Tracker & Audio Bus Mixer',
+            href: `${catalogBase}#block-b--audio-sfx--music`,
+          },
+          {
+            title: 'Combat & Gameplay',
+            desc: 'Frame Data, Hitbox/Hurtbox, Skill Tree, Loot Table & FSM/BT',
+            href: `${catalogBase}#block-c--combat-gameplay--ai`,
+          },
+          {
+            title: 'World & HUD',
+            desc: 'Responsive HUD, Dungeons, 2D Parallax, Camera Zones & Dialogues',
+            href: `${catalogBase}#block-e--ui-hud--controls`,
+          },
         ],
       };
 ---
@@ -44,8 +77,8 @@ const copy =
     <div class="forge-showcase__dots" aria-hidden="true">
       <span></span><span></span><span></span>
     </div>
-    <span>{copy.windowTitle}</span>
-    <span>Godot 4 • File-over-App</span>
+    <span class="forge-showcase__title">{copy.windowTitle}</span>
+    <span class="forge-showcase__meta">Godot 4 • File-over-App</span>
   </div>
 
   <div class="forge-showcase__frame">
@@ -63,10 +96,10 @@ const copy =
 
   <div class="forge-showcase__grid">
     {copy.blocks.map((block) => (
-      <div class="forge-showcase__pill">
+      <a class="forge-showcase__pill" href={block.href}>
         <strong>{block.title}</strong>
         <span>{block.desc}</span>
-      </div>
+      </a>
     ))}
   </div>
 </div>

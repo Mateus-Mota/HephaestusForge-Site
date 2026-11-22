@@ -30,6 +30,10 @@ description: How to organize your local Kenney (CC0) library, configure asset bu
   - Archives **without** the `kenney_` prefix (e.g., `tiny-dungeon.zip`) are recognized **when placed inside a folder named `kenney`**. This prevents unrelated `.zip` files from being mislabeled as CC0 Kenney packs.
 - **Deduplication**: duplicate downloads (e.g., `kenney_ui-pack (1).zip`) automatically defer to the primary archive.
 
+:::tip[Keep your `.zip` archives intact]
+You never need to manually extract Kenney packs. Keeping them zipped saves disk space and lets HephaestusForge copy only what each new project needs while recording license metadata automatically.
+:::
+
 ## 2. The `.forge/starter_assets.json` Manifest
 
 When a pack is applied, HephaestusForge atomically writes `.forge/starter_assets.json` tracking:
@@ -39,10 +43,21 @@ When a pack is applied, HephaestusForge atomically writes `.forge/starter_assets
 
 ## 3. Technical Asset Budgets (`.forge/asset_spec.json`)
 
-The **Asset Catalog** inspects sprites, textures, audio, and 3D meshes in your project. Customize max resolutions (e.g., `2048px`), power-of-two rules, and 3D triangle budgets via `.forge/asset_spec.json`.
+The **Asset Catalog** inspects sprites, textures, audio, and 3D meshes in your project. Customize max resolutions (e.g., `2048px`), power-of-two rules, and 3D triangle budgets by creating or editing `.forge/asset_spec.json` at the workspace root.
 
 ## 4. External Tools & Web Generators
 
-In **Settings → Tools & Software**, **Studios → Generators & External**, and the **Asset Catalog**:
-- **Local desktop tools (auto-detected on Windows)**: **Kenney Shape (2D → 3D)**, **Aseprite**, **Blender**, **Krita**, **GIMP**, **Photoshop**, **Audacity**, and **ArtCraft**.
-- **Zero-install web generators**: **Kenney Avatar Mixer**, **Creature Mixer**, **Ship Mixer**, **PMDCollab SpriteCollab**, **Quaternius**, **BeepBox**, **Chiptone**, **AudioMass**, and **Jfxr**.
+In **Settings → Tools & Software**, **Studios → Generators & External**, and the **Asset Catalog**, you will find two categories of integrations:
+
+### Local Desktop Tools (Auto-detected on Windows)
+- **Kenney Shape (2D → 3D)**: extrude 2D pixel art into low-poly 3D meshes (`.obj`, `.glb`, `.fbx`).
+- **Aseprite**, **Blender**, **Krita**, **GIMP**, **Photoshop**, **Audacity**, and **ArtCraft**.
+- Click **Re-scan** under *Settings → Tools & Software* whenever you install a new desktop tool.
+
+### Zero-Install Web Generators
+- **Kenney Avatar Mixer**, **Kenney Creature Mixer**, and **Kenney Ship Mixer** — launch straight in your browser to generate CC0 characters, creatures, and ships ready to drop into `assets/`.
+- Quick shortcuts to **PMDCollab SpriteCollab**, **Kenney.nl**, **Quaternius**, **BeepBox**, **Chiptone**, **AudioMass**, and **Jfxr**.
+
+:::note[Want to launch an internal studio from the Asset Catalog?]
+Since `v0.3.0`, all 37 internal studios are unified under **Studios**. Use the **Open Studios →** button in the Asset Catalog header or press `Ctrl+K` to jump straight to any studio.
+:::

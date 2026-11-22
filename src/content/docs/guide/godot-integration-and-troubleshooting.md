@@ -14,6 +14,10 @@ This guide explains how to connect your **Godot 4** executable to **HephaestusFo
    - **Play (`F5`)** in the top bar or inside any Kanban task runs the game immediately.
    - **Open in Editor** opens the full project in the Godot 4 editor.
 
+:::tip[Verbose logs with `_console.exe`]
+On Windows, Godot ships with both `Godot_v4.x_win64.exe` and `Godot_v4.x_win64_console.exe`. Pointing HephaestusForge to the `_console.exe` binary makes runtime printouts and stack traces much easier to inspect when debugging.
+:::
+
 ## 2. Generated Project Structure & Main Scene
 
 Projects created through the **Creation Ritual** or **Project Forge Wizard** follow a clean, ready-to-run layout:
@@ -49,3 +53,7 @@ my-game/
 
 ### "How do I restore the default sidebar modules?"
 - Click **More (`⋯`)** at the bottom-left and choose **Restore default bar** to reset to `GDD`, `Kanban`, `Project Map`, and `Studios`.
+
+:::caution[Avoid cloud-synced folders for active Git + Godot projects]
+Placing your project inside OneDrive or Dropbox can lock `.godot/` cache files and cause conflicts with atomic writes. Prefer a local folder such as `C:\Dev\Games\my-game` backed up via Git.
+:::

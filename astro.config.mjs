@@ -7,7 +7,48 @@ export default defineConfig({
     starlight({
       title: 'HephaestusForge',
       description:
-        'Desktop file-over-app workbench for indie game development with Godot 4, 36 built-in studios, live GDD, Kanban, and local Kenney starter packs.',
+        'Desktop file-over-app workbench for indie game development with Godot 4, 37 built-in studios, live GDD, Kanban, and local Kenney starter packs.',
+      favicon: '/favicon.svg',
+      logo: {
+        src: './src/assets/forge-logo.svg',
+        alt: 'HephaestusForge',
+      },
+      head: [
+        {
+          tag: 'meta',
+          attrs: { name: 'theme-color', content: '#0c0f14' },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:type', content: 'website' },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            property: 'og:image',
+            content: 'https://hephaestusforge.vercel.app/og-image.png',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image:width', content: '1200' },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image:height', content: '630' },
+        },
+        {
+          tag: 'meta',
+          attrs: { name: 'twitter:card', content: 'summary_large_image' },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'twitter:image',
+            content: 'https://hephaestusforge.vercel.app/og-image.png',
+          },
+        },
+      ],
       defaultLocale: 'root',
       locales: {
         root: {
@@ -72,6 +113,16 @@ export default defineConfig({
               label: 'Studios Catalog (Blocks A–H)',
               translations: { 'pt-BR': 'Catálogo de Estúdios (A–H)' },
               slug: 'guide/studios-catalog',
+            },
+            {
+              label: 'Keyboard Shortcuts',
+              translations: { 'pt-BR': 'Atalhos de Teclado' },
+              slug: 'guide/shortcuts',
+            },
+            {
+              label: 'FAQ',
+              translations: { 'pt-BR': 'Perguntas Frequentes (FAQ)' },
+              slug: 'guide/faq',
             },
             {
               label: 'Changelog',

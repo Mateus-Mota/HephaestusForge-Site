@@ -1,16 +1,20 @@
 ---
 title: Catálogo de Estúdios da Forja (Blocos A–H)
-description: Visão prática de todos os estúdios autorais internos do HephaestusForge e dos arquivos gerados para Godot 4.
+description: Visão prática de todos os 37 estúdios autorais internos do HephaestusForge e dos arquivos gerados para Godot 4.
 ---
 
-O módulo **Estúdios** reúne todas as ferramentas autorais internas do **HephaestusForge** em uma bancada unificada, organizada por disciplina de produção. Cada estúdio grava artefatos diretamente na pasta do projeto (*file-over-app*) prontos para consumo na engine (especialmente **Godot 4**).
+O módulo **Estúdios** reúne todas as 37 ferramentas autorais internas do **HephaestusForge** em uma bancada unificada, organizada por disciplina de produção. Cada estúdio grava artefatos diretamente na pasta do projeto (*file-over-app*) prontos para consumo na engine (especialmente **Godot 4**).
 
 ## Como usar os Estúdios no fluxo diário
 
 1. Abra **Estúdios** na barra lateral esquerda (ou pelo atalho na barra superior de **Assets** via **Abrir Estúdios →**).
-2. Escolha a ferramenta pela categoria desejada.
+2. Escolha a ferramenta pela categoria desejada (ou pressione `Ctrl+K` e digite o nome).
 3. Ajuste os parâmetros com preview em tempo real.
 4. Clique em **Salvar / Exportar para o Projeto** — o arquivo é gravado diretamente no repositório (`.tres`, `.tscn`, `.gd`, `.gdshader`, `.json`, `.png` ou `.wav`) e, quando suportado, pode ser ligado à cena principal pelo botão **Usar na cena principal**.
+
+:::tip[Conexão em 1 clique com `scenes/main.tscn`]
+Ao exportar de *Animação de Sprites*, *Shader VFX 2D*, *Estúdio de HUD* ou *Tilemap & Colisões*, clique em **"Usar na cena principal"** para vincular o recurso gerado em `.forge/starter_assets.json` e testar imediatamente com `F5`.
+:::
 
 ## Blocos de Ferramentas
 

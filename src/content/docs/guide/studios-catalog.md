@@ -1,16 +1,20 @@
 ---
 title: Studios Catalog (Blocks A–H)
-description: Practical overview of all 36 built-in studios inside HephaestusForge and the files they export for Godot 4.
+description: Practical overview of all 37 built-in studios inside HephaestusForge and the files they export for Godot 4.
 ---
 
-The **Studios** module unifies all internal authoring tools inside **HephaestusForge**, organized by production discipline. Every studio writes real files directly into your project (*file-over-app*) ready for **Godot 4** and other engines.
+The **Studios** module unifies all 37 internal authoring tools inside **HephaestusForge**, organized by production discipline. Every studio writes real files directly into your project (*file-over-app*) ready for **Godot 4** and other engines.
 
 ## Daily Studio Workflow
 
 1. Open **Studios** from the left sidebar (or via **Open Studios →** in the Asset Catalog).
-2. Pick a studio by discipline.
+2. Pick a studio by discipline (or press `Ctrl+K` and type its name).
 3. Tune parameters with live preview.
 4. Click **Save / Export to Project** — outputs are written straight to disk (`.tres`, `.tscn`, `.gd`, `.gdshader`, `.json`, `.png`, or `.wav`) and supported 2D studios offer **"Use in main scene"** to wire them automatically.
+
+:::tip[One-click wiring to `scenes/main.tscn`]
+When exporting from *Sprite Animation*, *Shader VFX 2D*, *HUD Layout*, or *Tilemap Collision*, click **"Use in main scene"** so HephaestusForge binds the generated resource into `.forge/starter_assets.json` for immediate testing with `F5`.
+:::
 
 ## Tool Blocks
 

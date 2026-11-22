@@ -1,9 +1,9 @@
 ---
 title: HephaestusForge
-description: Estação de trabalho desktop file-over-app para desenvolvimento de jogos — GDD vivo, Kanban, Grafo de Conhecimento, 36 estúdios internos e integração direta com Godot 4.
+description: Estação de trabalho desktop file-over-app para desenvolvimento de jogos — GDD vivo, Kanban, Grafo de Conhecimento, 37 estúdios internos e integração direta com Godot 4.
 template: splash
 hero:
-  tagline: Sua estação desktop file-over-app para criar jogos — GDD vivo, Kanban, Grafo de Conhecimento, 36 estúdios internos e Play (F5) direto no Godot 4.
+  tagline: Sua estação desktop file-over-app para criar jogos — GDD vivo, Kanban, Grafo de Conhecimento, 37 estúdios internos e Play (F5) direto no Godot 4.
   actions:
     - text: Baixar v0.3.0 (Windows)
       link: '#download'
@@ -17,6 +17,7 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import StudiosShowcase from '../../../components/StudiosShowcase.astro';
+import WorkflowSteps from '../../../components/WorkflowSteps.astro';
 import DownloadBanner from '../../../components/DownloadBanner.astro';
 
 <div class="forge-badges">
@@ -36,7 +37,7 @@ import DownloadBanner from '../../../components/DownloadBanner.astro';
   <Card title="100% File-over-App (Zero Lock-in)" icon="document">
     Todo GDD, tarefa do Kanban, ADR, fluxo narrativo e skill de IA vive em arquivos reais `.md` e `.json` dentro do repositório Git do seu jogo. Sem banco de dados proprietário.
   </Card>
-  <Card title="36 Estúdios Internos + Godot 4" icon="puzzle">
+  <Card title="37 Estúdios Internos + Godot 4" icon="puzzle">
     Animação de Sprites, Shader VFX 2D, HUD, Tilemap Collision, Sintetizador SFX, Frame Data de Combate, Diálogos, Zonas de Câmera e Parallax 2D — exportando `.tres`, `.tscn`, `.gd` e `.gdshader` direto no projeto.
   </Card>
   <Card title="Kanban ligado ao Git e Play (F5)" icon="approve-check-circle">
@@ -53,8 +54,12 @@ import DownloadBanner from '../../../components/DownloadBanner.astro';
   </Card>
 </CardGrid>
 
+## Do zero ao Play (F5) em 3 passos
+
+<WorkflowSteps lang="pt" />
+
 ## Download v0.3.0
 
 <DownloadBanner lang="pt" />
 
-Precisa de requisitos de sistema, changelog ou passo a passo? Acesse **[Downloads](/pt/downloads/)**, **[Changelog](/pt/changelog/)** ou comece por **[Primeiros Passos & Ritual de Criação](/pt/guide/getting-started/)**.
+Precisa de requisitos de sistema, atalhos ou respostas rápidas? Acesse **[Downloads](/pt/downloads/)**, **[Atalhos de Teclado](/pt/guide/shortcuts/)**, **[FAQ](/pt/guide/faq/)**, **[Changelog](/pt/changelog/)** ou comece por **[Primeiros Passos & Ritual de Criação](/pt/guide/getting-started/)**.

@@ -30,6 +30,10 @@ O **HephaestusForge** não distribui pacotes de terceiros embutidos no executáv
   - Arquivos **sem** o prefixo `kenney_` (ex.: `tiny-dungeon.zip`) também são reconhecidos **desde que estejam dentro de uma pasta chamada `kenney`**. Essa proteção evita rotular erroneamente um `.zip` de outra origem como CC0 do Kenney.
 - **Deduplicação**: se você baixou o mesmo pacote duas vezes (ex.: `kenney_ui-pack (1).zip`), o scanner prioriza automaticamente o arquivo principal sem sufixo de cópia.
 
+:::tip[Mantenha seus arquivos `.zip` intactos]
+Você não precisa descompactar os pacotes do Kenney manualmente. Mantê-los em `.zip` economiza espaço em disco e permite que o HephaestusForge importe apenas o necessário para cada projeto, gravando automaticamente os metadados de licença.
+:::
+
 ## 2. Manifesto `.forge/starter_assets.json`
 
 Quando um pacote é adicionado ao projeto, o HephaestusForge grava atomicamente `.forge/starter_assets.json` registrando:
@@ -54,3 +58,7 @@ Em **Configurações → Ferramentas & Softwares**, **Estúdios → Geradores & 
 ### Geradores Web (Zero Instalação)
 - **Kenney Avatar Mixer**, **Kenney Creature Mixer** e **Kenney Ship Mixer** — abrem direto no navegador para gerar personagens, criaturas e naves CC0 prontos para importar na pasta `assets/`.
 - Atalhos para **PMDCollab SpriteCollab**, **Kenney.nl**, **Quaternius**, **BeepBox**, **Chiptone**, **AudioMass** e **Jfxr**.
+
+:::note[Quer abrir um estúdio interno a partir do Catálogo de Assets?]
+Desde a `v0.3.0`, todas as 37 ferramentas internas ficam unificadas em **Estúdios**. Use o botão **Abrir Estúdios →** no cabeçalho do Catálogo de Assets ou pressione `Ctrl+K` para ir direto ao estúdio desejado.
+:::
