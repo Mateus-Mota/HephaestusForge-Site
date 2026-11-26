@@ -14,17 +14,6 @@
       <stop offset="45%" stop-color="#FF7A1A" stop-opacity="0.5"/>
       <stop offset="100%" stop-color="#4A3C2E" stop-opacity="0.75"/>
     </linearGradient>
-    <linearGradient id="flameMain" x1="210" y1="108" x2="210" y2="238" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFF1D0"/>
-      <stop offset="0.38%" stop-color="#FFF1D0"/>
-      <stop offset="48%" stop-color="#FF7A1A"/>
-      <stop offset="100%" stop-color="#E0450F"/>
-    </linearGradient>
-    <linearGradient id="anvilGrad" x1="126" y1="250" x2="294" y2="292" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFB25C"/>
-      <stop offset="50%" stop-color="#FF7A1A"/>
-      <stop offset="100%" stop-color="#C2560C"/>
-    </linearGradient>
     <filter id="softGlow" x="-25%" y="-25%" width="150%" height="150%">
       <feGaussianBlur stdDeviation="8" result="blur"/>
       <feMerge>
@@ -32,6 +21,16 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <radialGradient id="markHeat" cx="50%" cy="85%" r="75%">
+      <stop offset="0" stop-color="#FFF1D0"/>
+      <stop offset="0.35" stop-color="#FFB25C"/>
+      <stop offset="0.7" stop-color="#FF7A1A"/>
+      <stop offset="1" stop-color="#C2560C"/>
+    </radialGradient>
+    <linearGradient id="markFlame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFB25C"/>
+      <stop offset="1" stop-color="#FF7A1A"/>
+    </linearGradient>
   </defs>
 
   <!-- Halo de brasa -->
@@ -57,14 +56,10 @@
   <circle cx="284" cy="176" r="2" fill="#FF7A1A" fill-opacity="0.75"/>
   <circle cx="136" cy="186" r="2" fill="#FF7A1A" fill-opacity="0.6"/>
 
-  <!-- Chama da Forja -->
-  <g filter="url(#softGlow)">
-    <path d="M210 112C229 144 254 165 254 196C254 221 234 239 210 239C186 239 166 221 166 196C166 177 176 161 188 148C187 161 193 169 201 172C197 151 200 130 210 112Z" fill="url(#flameMain)"/>
-    <path d="M210 162C219 177 229 187 229 201C229 212 220 221 210 221C200 221 191 212 191 201C191 192 196 184 202 178C202 184 205 188 208 190C206 180 207 171 210 162Z" fill="#FFF1D0" fill-opacity="0.9"/>
+  <!-- Marca da Forja viva (mesma bigorna + chama do app, public/favicon.svg) -->
+  <g transform="translate(95 102) scale(3.6)" filter="url(#softGlow)">
+    <path d="M10 27h34c5 0 10 3 10 7H40l-3 6h4v8H23v-8h4l-3-6h-8c-4 0-7-3-6-7z" fill="url(#markHeat)"/>
+    <path d="M31 8c3 5 8 7.5 8 13a6.5 6.5 0 0 1-13 0c0-4 3.5-6.5 5-13z" fill="url(#markFlame)"/>
+    <path d="M31.5 13.5c1.5 3 4 4.5 4 7.5a3.5 3.5 0 0 1-7 0c0-2.2 2-3.8 3-7.5z" fill="#FFF1D0"/>
   </g>
-
-  <!-- Bigorna estilizada -->
-  <path d="M132 252H288L271 282C268.2 287 262.9 290 257.2 290H162.8C157.1 290 151.8 287 149 282L132 252Z" fill="url(#anvilGrad)"/>
-  <rect x="158" y="298" width="104" height="14" rx="7" fill="#FFB25C"/>
-  <rect x="176" y="316" width="68" height="4" rx="2" fill="#4A3C2E"/>
 </svg>

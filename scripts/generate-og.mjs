@@ -128,11 +128,14 @@ const html = `<!doctype html>
     <div class="left">
       <div class="brand">
         <svg width="46" height="46" viewBox="0 0 64 64" fill="none">
-          <rect width="64" height="64" rx="14" fill="#17130F"/>
-          <rect x="2" y="2" width="60" height="60" rx="12" stroke="#FF7A1A" stroke-opacity="0.55" stroke-width="2"/>
-          <path d="M32 10C35.8 16.5 41 20.8 41 27.2C41 32.3 37 36 32 36C27 36 23 32.3 23 27.2C23 23.4 25.1 20.2 27.6 17.5C27.4 20.2 28.6 21.8 30.2 22.5C29.4 18.2 30.1 13.8 32 10Z" fill="#FF7A1A"/>
-          <path d="M16 39H48L44.5 45.5C43.9 46.6 42.7 47.3 41.4 47.3H22.6C21.3 47.3 20.1 46.6 19.5 45.5L16 39Z" fill="#FF7A1A"/>
-          <rect x="21" y="49.5" width="22" height="4.5" rx="2.25" fill="#FFB25C"/>
+          <defs>
+            <radialGradient id="ogHeat" cx="50%" cy="85%" r="75%"><stop offset="0" stop-color="#FFF1D0"/><stop offset="0.35" stop-color="#FFB25C"/><stop offset="0.7" stop-color="#FF7A1A"/><stop offset="1" stop-color="#C2560C"/></radialGradient>
+            <linearGradient id="ogFlame" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB25C"/><stop offset="1" stop-color="#FF7A1A"/></linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="14" fill="#0F0D0C"/>
+          <path d="M10 27h34c5 0 10 3 10 7H40l-3 6h4v8H23v-8h4l-3-6h-8c-4 0-7-3-6-7z" fill="url(#ogHeat)"/>
+          <path d="M31 8c3 5 8 7.5 8 13a6.5 6.5 0 0 1-13 0c0-4 3.5-6.5 5-13z" fill="url(#ogFlame)"/>
+          <path d="M31.5 13.5c1.5 3 4 4.5 4 7.5a3.5 3.5 0 0 1-7 0c0-2.2 2-3.8 3-7.5z" fill="#FFF1D0"/>
         </svg>
         <span class="brand-name">HephaestusForge</span>
       </div>
