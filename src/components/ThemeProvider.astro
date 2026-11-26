@@ -1,0 +1,18 @@
+---
+/*
+ * HephaestusForge: o site acompanha o app, que tem só a Forja viva (tema escuro).
+ * Sobrescreve o ThemeProvider do Starlight para sempre usar o escuro, ignorando
+ * prefers-color-scheme e o tema salvo. O bloco claro de forge-theme.css continua
+ * no arquivo para a decisão final (DESIGN-04) poder reativá-lo.
+ */
+---
+
+<script is:inline>
+	window.StarlightThemeProvider = (() => {
+		document.documentElement.dataset.theme = 'dark';
+		try {
+			localStorage.removeItem('starlight-theme');
+		} catch {}
+		return { updatePickers() {} };
+	})();
+</script>
