@@ -102,8 +102,8 @@ export default defineConfig({
               slug: 'guide/getting-started',
             },
             {
-              label: 'Downloads (v0.3.0)',
-              translations: { 'pt-BR': 'Downloads (v0.3.0)' },
+              label: 'Downloads (v0.4.0)',
+              translations: { 'pt-BR': 'Downloads (v0.4.0)' },
               slug: 'downloads',
             },
           ],

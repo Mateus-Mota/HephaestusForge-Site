@@ -3,6 +3,21 @@ title: Changelog
 description: Histórico de lançamentos e principais melhorias do HephaestusForge.
 ---
 
+## `v0.4.0` (Novembro 2026) · Integração com IA
+
+### Novidades
+- **Agentes de IA dentro do app**: Claude Code, Codex, OpenCode, Gemini e Antigravity rodam direto no projeto, com saída ao vivo, conversa contínua, revisão do que mudou e desfazer por arquivo.
+- **HephaestusForge como servidor MCP**: os agentes leem GDD, tarefas, assets, estúdios, busca e grafo, e movem tarefas no Kanban.
+- **Login dos agentes pelo app** e **painel de IA** com botão próprio na barra de cima e modo tela cheia.
+- **Estúdios conectados ao Godot**: "Conectar ao Godot", "Testar no Preview" em HTML5 e ponte entre os estúdios de RPG.
+- Painéis laterais redimensionáveis; o app abre maximizado.
+
+### Correções
+- Trocar de projeto não mistura mais dados do anterior (Codex, Galeria, Mapa, Grafo e FSM).
+- "Voltar" da Nova encomenda, previews HTML5 no app instalado, tour e HUD do Ritual.
+
+---
+
 ## `v0.3.0` (Novembro 2026)
 
 ### Novidades & UX

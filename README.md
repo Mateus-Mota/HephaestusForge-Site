@@ -29,10 +29,10 @@ This repository hosts:
 
 ---
 
-## Downloads (`v0.3.0` — Windows 10/11 x64)
+## Downloads (`v0.4.0` — Windows 10/11 x64)
 
 - **Quick download (NSIS `.exe`):** [hephaestusforge.vercel.app/download](https://hephaestusforge.vercel.app/download)
-- **All installers & SHA-256 checksums:** [Downloads page](https://hephaestusforge.vercel.app/downloads/) | [GitHub Releases](https://github.com/Mateus-Mota/HephaestusForge-Site/releases/tag/v0.3.0)
+- **All installers & SHA-256 checksums:** [Downloads page](https://hephaestusforge.vercel.app/downloads/) | [GitHub Releases](https://github.com/Mateus-Mota/HephaestusForge-Site/releases/tag/v0.4.0)
 
 ---
 
