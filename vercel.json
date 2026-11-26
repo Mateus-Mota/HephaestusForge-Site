@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/download",
-      "destination": "https://github.com/Mateus-Mota/HephaestusForge-Site/releases/download/v0.3.0/HephaestusForge_0.3.0_x64-setup.exe",
+      "destination": "https://github.com/Mateus-Mota/HephaestusForge-Site/releases/download/v0.4.0/HephaestusForge_0.4.0_x64-setup.exe",
       "permanent": false
     }
   ]

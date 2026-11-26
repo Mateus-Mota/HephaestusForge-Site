@@ -139,7 +139,7 @@ const html = `<!doctype html>
         </svg>
         <span class="brand-name">HephaestusForge</span>
       </div>
-      <div class="badge">v0.3.0 • Windows x64 • Tauri v2 + Rust</div>
+      <div class="badge">v0.4.0 • Windows x64 • Tauri v2 + Rust</div>
       <h1>File-over-App Workbench for <span>Godot 4</span></h1>
       <p>Live GDD, Kanban, Knowledge Graph, 37 built-in studios, and one-click Play (F5) — zero lock-in.</p>
       <div class="pills">
